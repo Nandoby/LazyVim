@@ -47,8 +47,7 @@ vim.keymap.set("i", ".", ".<c-g>u")
 vim.keymap.set("i", ";", ";<c-g>u")
 
 -- save in insert mode
-vim.keymap.set("i", "<C-s>", "<cmd>w<cr><esc>")
-vim.keymap.set("n", "<C-s>", "<cmd>w<cr><esc>")
+vim.keymap.set({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>")
 
 -- better indenting
 vim.keymap.set("v", "<", "<gv")
@@ -58,10 +57,10 @@ vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
 
 -- lazygit
-vim.keymap.set("n", "<leader>gg", function ()
+vim.keymap.set("n", "<leader>gg", function()
   require("lazyvim.util").float_term({ "lazygit" })
 end, { desc = "Lazygit for cwd" })
-vim.keymap.set("n", "<leader>gG", function ()
+vim.keymap.set("n", "<leader>gG", function()
   local util = require("lazyvim.util")
   util.float_term({ "lazygit" }, { cwd = util.get_root() })
 end, { desc = "Lazygit for root dir" })
