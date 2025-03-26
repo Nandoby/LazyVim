@@ -15,6 +15,9 @@ return {
         end,
         desc = "NeoTree",
       },
+      init = function()
+        vim.g.neo_tree_remove_legacy_commands = 1
+      end,
     },
     config = {
       filesystem = {
@@ -188,4 +191,3 @@ return {
     },
   },
 }
-
