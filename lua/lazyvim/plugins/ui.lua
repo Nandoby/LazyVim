@@ -16,14 +16,13 @@ return {
   -- better vim.ui
   {
     "stevearc/dressing.nvim",
-    event = "VeryLazy",
     init = function()
       ---@diagnostic disable-next-line: duplicate-set-field
       vim.ui.select = function(...)
         require("lazy").load({ plugins = { "dressing.nvim" } })
         return vim.ui.select(...)
       end
-      ---@diagnostic disable-next-line:duplicate-set-field
+      ---@diagnostic disable-next-line: duplicate-set-field
       vim.ui.input = function(...)
         require("lazy").load({ plugins = { "dressing.nvim" } })
         return vim.ui.input(...)
@@ -103,17 +102,17 @@ return {
   -- dashboard
   {
     "goolord/alpha-nvim",
-    lazy = false,
+    event = "VimEnter",
     config = function()
       local dashboard = require("alpha.themes.dashboard")
       local logo = [[
-              ██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z
-              ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝██║   ██║██║████╗ ████║      Z    
-              ██║     ███████║  ███╔╝  ╚████╔╝ ██║   ██║██║██╔████╔██║   z       
-              ██║     ██╔══██║ ███╔╝    ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║ z         
-              ███████╗██║  ██║███████╗   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║
-              ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝
- ]]
+             ██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z
+             ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝██║   ██║██║████╗ ████║      Z    
+             ██║     ███████║  ███╔╝  ╚████╔╝ ██║   ██║██║██╔████╔██║   z       
+             ██║     ██╔══██║ ███╔╝    ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║ z         
+             ███████╗██║  ██║███████╗   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║
+             ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝
+      ]]
 
       dashboard.section.header.val = vim.split(logo, "\n")
       dashboard.section.buttons.val = {
@@ -134,17 +133,15 @@ return {
       dashboard.section.buttons.opts.hl = "AlphaButtons"
       dashboard.opts.layout[1].val = 8
 
+      local alpha = require("alpha")
       if vim.o.filetype == "lazy" then
         -- close and re-open Lazy after showing alpha
-        vim.notify("Missing plugins installed!", vim.log.levels.INFO, { title = "lazy.nvim" })
         vim.cmd.close()
-        require("alpha").setup(dashboard.opts)
+        alpha.setup(dashboard.opts)
         require("lazy").show()
       else
-        require("alpha").setup(dashboard.opts)
+        alpha.setup(dashboard.opts)
       end
-
-      require("alpha").setup(dashboard.opts)
 
       vim.api.nvim_create_autocmd("User", {
         pattern = "LazyVimStarted",
@@ -158,3 +155,4 @@ return {
     end,
   },
 }
+
