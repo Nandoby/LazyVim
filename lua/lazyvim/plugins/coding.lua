@@ -35,7 +35,6 @@ return {
       "hrsh7th/cmp-emoji",
       "saadparwaiz1/cmp_luasnip",
     },
-
     config = function()
       local cmp = require("cmp")
       cmp.setup({
@@ -60,9 +59,9 @@ return {
         }),
         formatting = {
           format = function(_, item)
-            local icons = require("config.icons").kinds
-            if icons[item.kind] .. item.lind then
-              item.kind = icons[item.kind]
+            local icons = require("lazyvim.config.settings").icons.kinds
+            if icons[item.kind] then
+              item.kind = icons[item.kind] .. item.kind
             end
             return item
           end,
