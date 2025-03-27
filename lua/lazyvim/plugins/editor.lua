@@ -142,7 +142,7 @@ return {
         ["<leader>n"] = { name = "+noice" },
         ["<leader>q"] = { name = "+quit/session" },
         ["<leader>s"] = { name = "+search" },
-        ["<leader>x"] = { name = "+diagnostics" },
+        ["<leader>x"] = { name = "+diagnostics/quickfix" },
       })
     end,
   },
