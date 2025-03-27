@@ -18,7 +18,7 @@ jobs:
           # 1. Download
           wget -q https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.tar.gz -O /tmp/nvim.tar.gz
           tar -xf /tmp/nvim.tar.gz -C /tmp
-          sudo cp -r /tmp/nvim-linux-arm64/* /usr/local/
+          sudo cp -r /tmp/nvim-linux-x86_64/* /usr/local/
       - name: Run Tests
         run: |
           nvim --version
