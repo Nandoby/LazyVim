@@ -96,7 +96,7 @@ return {
             ["<C-h>"] = function()
               util.telescope("find_files", { hidden = true })()
             end,
-            ["<C-Down"] = function(...)
+            ["<C-Down>"] = function(...)
               return require("telescope.actions").cycle_history_next(...)
             end,
             ["<C-Up>"] = function(...)
@@ -172,7 +172,7 @@ return {
     end,
     -- stylua: ignore
     keys = {
-      { "]]", function() require("illuminate").goto_next_reference(false) end, desc = "Next Reference" },
+      { "]]", function() require("illuminate").goto_next_reference(false) end, desc = "Next Reference", },
       { "[[", function() require("illuminate").goto_prev_reference(false) end, desc = "Prev Reference" },
     },
   },
@@ -184,6 +184,32 @@ return {
     keys = {
       { "<leader>bd", function() require("mini.bufremove").delete(0, false) end, desc = "Delete Buffer" },
       { "<leader>bD", function() require("mini.bufremove").delete(0, true) end, desc = "Delete Buffer (Force)" },
+    },
+  },
+
+  -- better diagnostics list and others
+  {
+    "folke/trouble.nvim",
+    cmd = { "TroubleToggle", "Trouble" },
+    config = { use_diagnostic_signs = true },
+    keys = {
+      { "<leader>xx", "<cmd>TroubleToggle workspace_diagnostics<cr>", desc = "Trouble" },
+    },
+  },
+
+  -- todo comments
+  {
+    "folke/todo-comments.nvim",
+    cmd = { "TodoTrouble", "TodoTelescope" },
+    event = "BufReadPost",
+    config = true,
+    -- stylua: ignore
+    keys = {
+      { "]t", function() require("todo-comments").jump_next() end, desc = "Next todo comment" },
+      { "[t", function() require("todo-comments").jump_prev() end, desc = "Previous todo comment" },
+      { "<leader>xt", "<cmd>TodoTrouble<cr>", "Todo Trouble" },
+      { "<leader>xtt", "<cmd>TodoTrouble keywords=TODO,FIX,FIXME<cr>", desc = "Todo Trouble" },
+      { "<leader>xT", "<cmd>TodoTelescope<cr>", desc = "Todo Telescope" },
     },
   },
 }
