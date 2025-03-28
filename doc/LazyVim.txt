@@ -6,6 +6,7 @@ Table of Contents                                  *LazyVim-table-of-contents*
 1. LazyVim                                                   |LazyVim-lazyvim|
   - Getting Started                          |LazyVim-lazyvim-getting-started|
   - Todo                                                |LazyVim-lazyvim-todo|
+  - Keymaps                                          |LazyVim-lazyvim-keymaps|
   - Plugins                                          |LazyVim-lazyvim-plugins|
 2. Links                                                       |LazyVim-links|
 
@@ -13,7 +14,7 @@ Table of Contents                                  *LazyVim-table-of-contents*
 1. LazyVim                                                   *LazyVim-lazyvim*
 
 Neovim config for the lazy powered by lazy.nvim
-<https://github.com/folke/lazy.nvim>
+<https://github.com/folke/lazy.nvim>.
 
 Can’t decide between building a config from scratch or using one of the
 existing Neovim **distros**?
@@ -40,7 +41,7 @@ You can find a starter template for **LazyVim** here
       },
       defaults = {
         lazy = true, -- every plugin is lazy-loaded by default
-        version = "*" -- try installing the latest stable version for plugins that support semver
+        version = "*", -- try installing the latest stable version for plugins that support semver
       },
     })
 <
@@ -53,6 +54,228 @@ TODO                                                    *LazyVim-lazyvim-todo*
 - list all plugins in readme
 - test all-the-things
 
+
+KEYMAPS                                              *LazyVim-lazyvim-keymaps*
+
+
+GENERAL ~
+
+  Key                  Description                  Mode
+  -------------------- ---------------------------- ------------
+  <C-h>                Go to left window            n
+  <C-j>                Go to lower window           n
+  <C-k>                Go to upper window           n
+  <C-l>                Go to right window           n
+  <C-Up>               Increase window height       n
+  <C-Down>             Decrease window height       n
+  <C-Left>             Decrease window width        n
+  <C-Right>            Increase window width        n
+  <A-j>                Move down                    n, v, i
+  <A-k>                Move up                      n, v, i
+  <S-h>                Prev buffer                  n
+  <S-l>                Next buffer                  n
+  [p                   Paste below                  n
+  ]p                   Paste above                  n
+  <esc>                Escape and clear hlsearch    i, n
+  n                    Next search result           n, x, o
+  N                    Prev search result           n, x, o
+  <C-s>                Save file                    i, v, n, s
+  <leader>l            Lazy                         n
+  <leader>fn           New File                     n
+  <leader>xl           Open Location List           n
+  <leader>xq           Open Quickfix List           n
+  <leader>tf           Format on Save               n
+  <leader>ts           Spelling                     n
+  <leader>tw           Word Wrap                    n
+  <leader>tn           Line Numbers                 n
+  <leader>td           Diagnostics                  n
+  <leader>tc           Conceal                      n
+  <leader>gg           Lazygit (cwd)                n
+  <leader>gG           Lazygit (root dir)           n
+  <leader>qq           Quit all                     n
+  <leader>hl           Highlight Groups at cursor   n
+  <leader>ot           Terminal (root dir)          n
+  <leader>oT           Terminal (cwd)               n
+  <esc><esc>           Enter Normal Mode            t
+  <leader>ww           other-window                 n
+  <leader>wd           delete-window                n
+  <leader>w-           split-window-below           n
+  <leader>w\|          split-window-right           n
+  <leader><tab>l       Last                         n
+  <leader><tab>f       First                        n
+  <leader><tab><tab>   New Tab                      n
+  <leader><tab>]       Next                         n
+  <leader><tab>d       Close                        n
+  <leader><tab>[       Previous                     n
+  <leader>b]           Next Buffer                  n
+  <leader>bb           Switch to Other Buffer       n
+  <leader>b[           Previous Buffer              n
+  `````                Switch to Other Buffer       n
+
+LSP ~
+
+  Key          Description             Mode
+  ------------ ----------------------- ------
+  <leader>cd   Line Diagnostics        n
+  <leader>cl   Lsp Info                n
+  <leader>xd   Telescope Diagnostics   n
+  gd           Goto Definition         n
+  gr           References              n
+  gD           Goto Declaration        n
+  gI           Goto Implementation     n
+  gt           Goto Type Definition    n
+  K            Hover                   n
+  gK           Signature Help          n
+  [d           Next Diagnostic         n
+  ]d           Prev Diagnostic         n
+  ]e           Next Error              n
+  [e           Prev Error              n
+  ]w           Next Warning            n
+  [w           Prev Warning            n
+  <leader>ca   Code Action             n, v
+  <leader>cf   Format Document         n
+  <leader>cf   Format Range            v
+  <leader>cr   Rename                  n
+
+PLUGINS ~
+
+  -----------------------------------------------------------------------
+  Key                     Description             Mode
+  ----------------------- ----------------------- -----------------------
+  <leader>cm              mason.nvim Mason        n
+
+  <leader>bd              mini.bufremove Delete   n
+                          Buffer                  
+
+  <leader>bD              mini.bufremove Delete   n
+                          Buffer (Force)          
+
+  <leader>ft              neo-tree.nvim NeoTree   n
+                          (root dir)              
+
+  <leader>fT              neo-tree.nvim NeoTree   n
+                          (cwd)                   
+
+  <S-Enter>               noice.nvim Redirect     c
+                          Cmdline                 
+
+  <leader>nl              noice.nvim Noice Last   n
+                          Message                 
+
+  <leader>nh              noice.nvim Noice        n
+                          History                 
+
+  <leader>na              noice.nvim Noice All    n
+
+  <leader>nd              nvim-notify Delete all  n
+                          Notifications           
+
+  <leader>sr              nvim-spectre Replace in n
+                          files (Spectre)         
+
+  <leader>qs              persistence.nvim        n
+                          Restore Session         
+
+  <leader>ql              persistence.nvim        n
+                          Restore Last Session    
+
+  <leader>qd              persistence.nvim Don’t  n
+                          Save Current Session    
+
+  <leader>/               telescope.nvim Find in  n
+                          Files (Grep)            
+
+  <leader><space>         telescope.nvim Find     n
+                          Files (root dir)        
+
+  <leader>fb              telescope.nvim Buffers  n
+
+  <leader>ff              telescope.nvim Find     n
+                          Files (root dir)        
+
+  <leader>fF              telescope.nvim Find     n
+                          Files (cwd)             
+
+  <leader>fr              telescope.nvim Recent   n
+
+  <leader>gc              telescope.nvim commits  n
+
+  <leader>gs              telescope.nvim status   n
+
+  <leader>ha              telescope.nvim Auto     n
+                          Commands                
+
+  <leader>hc              telescope.nvim Commands n
+
+  <leader>hf              telescope.nvim File     n
+                          Types                   
+
+  <leader>hh              telescope.nvim Help     n
+                          Pages                   
+
+  <leader>hk              telescope.nvim Key Maps n
+
+  <leader>hm              telescope.nvim Man      n
+                          Pages                   
+
+  <leader>ho              telescope.nvim Options  n
+
+  <leader>hs              telescope.nvim Search   n
+                          Highlight Groups        
+
+  <leader>ht              telescope.nvim          n
+                          Telescope               
+
+  <leader>sb              telescope.nvim Buffer   n
+
+  <leader>sc              telescope.nvim Command  n
+                          History                 
+
+  <leader>sg              telescope.nvim Grep     n
+                          (root dir)              
+
+  <leader>sG              telescope.nvim Grep     n
+                          (cwd)                   
+
+  <leader>sm              telescope.nvim Jump to  n
+                          Mark                    
+
+  <leader>,               telescope.nvim Switch   n
+                          Buffer                  
+
+  <leader>:               telescope.nvim Command  n
+                          History                 
+
+  <leader>ss              telescope.nvim Goto     n
+                          Symbol                  
+
+  ]t                      todo-comments.nvim Next n
+                          todo comment            
+
+  [t                      todo-comments.nvim      n
+                          Previous todo comment   
+
+  <leader>xt              todo-comments.nvim Todo n
+                          Trouble                 
+
+  <leader>xtt             todo-comments.nvim Todo n
+                          Trouble                 
+
+  <leader>xT              todo-comments.nvim Todo n
+                          Telescope               
+
+  <leader>xx              trouble.nvim Document   n
+                          Diagnostics (Trouble)   
+
+  <leader>xX              trouble.nvim Workspace  n
+                          Diagnostics (Trouble)   
+
+  ]]                      vim-illuminate Next     n
+                          Reference               
+
+  [[                      vim-illuminate Prev     n
+                          Reference               
+  -----------------------------------------------------------------------
 
 PLUGINS                                              *LazyVim-lazyvim-plugins*
 
