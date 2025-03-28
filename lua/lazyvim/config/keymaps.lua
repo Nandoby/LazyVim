@@ -6,17 +6,16 @@ local util = require("lazyvim.util")
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
--- Move to window using the <meta> movement keys
-vim.keymap.set("n", "<A-left>", "<C-w>h")
-vim.keymap.set("n", "<A-down>", "<C-w>j")
-vim.keymap.set("n", "<A-up>", "<C-w>k")
-vim.keymap.set("n", "<A-right>", "<C-w>l")
-
 -- Resize window using <shift> arrow keys
 vim.keymap.set("n", "<S-Up>", "<cmd>resize +2<CR>")
 vim.keymap.set("n", "<S-Down>", "<cmd>resize -2<CR>")
 vim.keymap.set("n", "<S-Left>", "<cmd>vertical resize -2<CR>")
 vim.keymap.set("n", "<S-Right>", "<cmd>vertical resize +2<CR>")
+-- Move to window using the <ctrl> hjkl keys
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
 
 -- Move Lines
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==")
@@ -77,7 +76,7 @@ vim.keymap.set("n", "<leader>tw", function() util.toggle("wrap") end, { desc = "
 vim.keymap.set("n", "<leader>tn", function() util.toggle("relativenumber", true) util.toggle("number") end, { desc = "Line Numbers" })
 vim.keymap.set("n", "<leader>td", util.toggle_diagnostics, { desc = "Diagnostics" })
 local conceallevel = vim.o.conceallevel > 0 and vim.o.conceallevel or 3
-vim.keymap.set("n", "<leader>tc", function() util.toggle("conceallevel", false, {0, conceallevel}) end, { desc = "Conceal" })
+vim.keymap.set("n", "<leader>tc", function() util.toggle("conceallevel", false, {0, conceallevel}) end, {  })
 
 -- lazygit
 vim.keymap.set("n", "<leader>gg", function() require("lazyvim.util").float_term({ "lazygit" }) end, { desc = "Lazygit (cwd)" })
