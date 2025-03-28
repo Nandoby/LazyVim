@@ -7,122 +7,11 @@ Table of Contents                                  *LazyVim-table-of-contents*
   - Getting Started                          |LazyVim-lazyvim-getting-started|
   - Todo                                                |LazyVim-lazyvim-todo|
   - Keymaps                                          |LazyVim-lazyvim-keymaps|
-2. LazyVim                                                   |LazyVim-lazyvim|
-  - Getting Started                          |LazyVim-lazyvim-getting-started|
-  - Todo                                                |LazyVim-lazyvim-todo|
-  - Keymaps                                          |LazyVim-lazyvim-keymaps|
   - Plugins                                          |LazyVim-lazyvim-plugins|
-3. Links                                                       |LazyVim-links|
+2. Links                                                       |LazyVim-links|
 
 ==============================================================================
 1. LazyVim                                                   *LazyVim-lazyvim*
-
-Neovim config for the lazy powered by lazy.nvim
-<https://github.com/folke/lazy.nvim>.
-
-Can’t decide between building a config from scratch or using one of the
-existing Neovim **distros**?
-
-With **LazyVim** you don’t have to. Configuring **LazyVim** is **exactly the
-same** as you would configure a config from scratch. You can easily add new
-plugins, change the config for existing ones or disable plugins.
-
-
-GETTING STARTED                              *LazyVim-lazyvim-getting-started*
-
-You can find a starter template for **LazyVim** here
-<https://github.com/LazyVim/starter>
-
-**TLDR:**
-
->lua
-    require("lazy").setup({
-      spec = {
-        -- import LazyVim plugins
-        { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-        -- import/override with your plugins
-        { import = "plugins" },
-      },
-      defaults = {
-        lazy = true, -- every plugin is lazy-loaded by default
-        version = "*", -- try installing the latest stable version for plugins that support semver
-      },
-    })
-<
-
-
-TODO                                                    *LazyVim-lazyvim-todo*
-
-- documentation
-- treesitter auto-install seems broken. Switch to `ensure_installed` instead?
-- list all plugins in readme
-- test all-the-things
-
-
-KEYMAPS                                              *LazyVim-lazyvim-keymaps*
-
-
-GENERAL ~
-
-  Key                  Description                  Mode
-  -------------------- ---------------------------- ------------
-  <C-h>                Go to left window            n
-  <C-j>                Go to lower window           n
-  <C-k>                Go to upper window           n
-  <C-l>                Go to right window           n
-  <C-Up>               Increase window height       n
-  <C-Down>             Decrease window height       n
-  <C-Left>             Decrease window width        n
-  <C-Right>            Increase window width        n
-  <A-j>                Move down                    n, v, i
-  <A-k>                Move up                      n, v, i
-  <S-h>                Prev buffer                  n
-  <S-l>                Next buffer                  n
-  [p                   Paste below                  n
-  ]p                   Paste above                  n
-  <esc>                Escape and clear hlsearch    i, n
-  n                    Next search result           n, x, o
-  N                    Prev search result           n, x, o
-  <C-s>                Save file                    i, v, n, s
-  <leader>l            Lazy                         n
-  <leader>fn           New File                     n
-  <leader>xl           Open Location List           n
-  <leader>xq           Open Quickfix List           n
-  <leader>tf           Format on Save               n
-  <leader>ts           Spelling                     n
-  <leader>tw           Word Wrap                    n
-  <leader>tn           Line Numbers                 n
-  <leader>td           Diagnostics                  n
-  <leader>tc           Conceal                      n
-  <leader>gg           Lazygit (cwd)                n
-  <leader>gG           Lazygit (root dir)           n
-  <leader>qq           Quit all                     n
-  <leader>hl           Highlight Groups at cursor   n
-  <leader>ot           Terminal (root dir)          n
-  <leader>oT           Terminal (cwd)               n
-  <esc><esc>           Enter Normal Mode            t
-  <leader>ww           other-window                 n
-  <leader>wd           delete-window                n
-  <leader>w-           split-window-below           n
-  <leader>w\|          split-window-right           n
-  <leader><tab>l       Last                         n
-  <leader><tab>f       First                        n
-  <leader><tab><tab>   New Tab                      n
-  <leader><tab>]       Next                         n
-  <leader><tab>d       Close                        n
-  <leader><tab>[       Previous                     n
-  <leader>b]           Next Buffer                  n
-  <leader>bb           Switch to Other Buffer       n
-  <leader>b[           Previous Buffer              n
-  <leader>`            Switch to Other Buffer       n
-
-LSP ~
-
-  Key   Description   Mode
-  ----- ------------- ------
-
-==============================================================================
-2. LazyVim                                                   *LazyVim-lazyvim*
 
 Neovim config for the lazy powered by lazy.nvim
 <https://github.com/folke/lazy.nvim>.
@@ -457,10 +346,9 @@ PLUGINS                                              *LazyVim-lazyvim-plugins*
 - which-key.nvim <https://github.com/folke/which-key.nvim>
 
 ==============================================================================
-3. Links                                                       *LazyVim-links*
+2. Links                                                       *LazyVim-links*
 
 1. *image*: https://user-images.githubusercontent.com/292349/210136312-c211f781-6d51-46b0-a265-6098bdbb364d.png
-2. *image*: https://user-images.githubusercontent.com/292349/210136312-c211f781-6d51-46b0-a265-6098bdbb364d.png
 
 Generated by panvimdoc <https://github.com/kdheepak/panvimdoc>
 
