@@ -1,6 +1,6 @@
 -- This file is automatically loaded by lazyvim.plugins.config
 
-local util = require("lazyvim.util")
+local util = require("lazyvim.util.init")
 
 -- better up/down
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -73,16 +73,16 @@ vim.keymap.set("n", "<leader>xq", "<cmd>copen<cr>", { desc = "Open Quickfix List
 -- stylua: ignore start
 
 -- toggle options
-vim.keymap.set("n", "<leader>tf", require("lazyvim.plugins.lsp.format").toggle, { desc = "Format on Save" })
-vim.keymap.set("n", "<leader>ts", function() util.toggle("spell") end, { desc = "Spelling" })
-vim.keymap.set("n", "<leader>tw", function() util.toggle("wrap") end, { desc = "Word Wrap" })
-vim.keymap.set("n", "<leader>tn", function() util.toggle("relativenumber", true) util.toggle("number") end, { desc = "Line Numbers" })
-vim.keymap.set("n", "<leader>td", util.toggle_diagnostics, { desc = "Diagnostics" })
+vim.keymap.set("n", "<leader>tf", require("lazyvim.plugins.lsp.format").toggle, { desc = "Toggle format on Save" })
+vim.keymap.set("n", "<leader>ts", function() util.toggle("spell") end, { desc = "Toggle Spelling" })
+vim.keymap.set("n", "<leader>tw", function() util.toggle("wrap") end, { desc = "Toggle Word Wrap" })
+vim.keymap.set("n", "<leader>tn", function() util.toggle("relativenumber", true) util.toggle("number") end, { desc = "Toggle Line Numbers" })
+vim.keymap.set("n", "<leader>td", util.toggle_diagnostics, { desc = "Toggle Diagnostics" })
 local conceallevel = vim.o.conceallevel > 0 and vim.o.conceallevel or 3
-vim.keymap.set("n", "<leader>tc", function() util.toggle("conceallevel", false, {0, conceallevel}) end, {  })
+vim.keymap.set("n", "<leader>tc", function() util.toggle("conceallevel", false, {0, conceallevel}) end, { desc = "Toggle Conceal" })
 
 -- lazygit
-vim.keymap.set("n", "<leader>gg", function() require("lazyvim.util").float_term({ "lazygit" }) end, { desc = "Lazygit (cwd)" })
+vim.keymap.set("n", "<leader>gg", function() require("lazyvim.util.init").float_term({ "lazygit" }) end, { desc = "Lazygit (cwd)" })
 vim.keymap.set("n", "<leader>gG", function() util.float_term({ "lazygit" }, { cwd = util.get_root() }) end, { desc = "Lazygit (root dir)" })
 
 -- quit
@@ -95,7 +95,7 @@ end
 
 -- floating terminal
 vim.keymap.set("n", "<leader>ot", function() util.float_term(nil, { cwd = util.get_root() }) end, { desc = "Terminal (root dir)" })
-vim.keymap.set("n", "<leader>oT", function() require("lazyvim.util").float_term() end, { desc = "Terminal (cwd)" })
+vim.keymap.set("n", "<leader>oT", function() require("lazyvim.util.init").float_term() end, { desc = "Terminal (cwd)" })
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
 
 -- windows

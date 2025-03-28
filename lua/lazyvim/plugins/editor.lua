@@ -1,4 +1,4 @@
-local util = require("lazyvim.util")
+local util = require("lazyvim.util.init")
 
 return {
 
@@ -10,7 +10,7 @@ return {
       {
         "<leader>ft",
         function()
-          require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").get_root() })
+          require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util.init").get_root() })
         end,
         desc = "NeoTree (root dir)",
       },

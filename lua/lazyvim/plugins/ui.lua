@@ -71,7 +71,7 @@ return {
     event = "VeryLazy",
     opts = function(plugin)
       if plugin.override then
-        require("lazyvim.util").deprecate("lualine.override", "lualine.opts")
+        require("lazyvim.util.init").deprecate("lualine.override", "lualine.opts")
       end
 
       local icons = require("lazyvim.config.settings").icons
@@ -280,7 +280,7 @@ return {
     "SmiteshP/nvim-navic",
     init = function()
       vim.g.navic_silence = true
-      require("lazyvim.util").on_attach(function(client, buffer)
+      require("lazyvim.util.init").on_attach(function(client, buffer)
         if client.server_capabilities.documentSymbolProvider then
           require("nvim-navic").attach(client, buffer)
         end
