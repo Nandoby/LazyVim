@@ -55,13 +55,13 @@ return {
       ---@type lspconfig.options
       local servers = plugin.servers or {}
       local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
-      
+
       require("mason-lspconfig").setup({ ensure_installed = vim.tbl_keys(servers) })
       require("mason-lspconfig").setup_handlers({
-        function (server)
+        function(server)
           local opts = servers[server] or {}
           opts.capabilities = capabilities
-          if not plugin.setup_server(opts) then
+          if not plugin.setup_server(server, opts) then
             require("lspconfig")[server].setup(opts)
           end
         end,
