@@ -12,7 +12,7 @@ Table of Contents                                  *LazyVim-table-of-contents*
 ==============================================================================
 1. LazyVim                                                   *LazyVim-lazyvim*
 
-Basic IDE for lazy Neovim users using lazy.nvim
+Basic IDE for lazy Neovim users powered bylazy.nvim
 <https://github.com/folke/lazy.nvim>
 
 Can’t decide between building a config from scratch or using one of the
