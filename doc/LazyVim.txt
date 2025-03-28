@@ -4,16 +4,22 @@
 Table of Contents                                  *LazyVim-table-of-contents*
 
 1. LazyVim                                                   |LazyVim-lazyvim|
+  - Getting Started                          |LazyVim-lazyvim-getting-started|
   - Todo                                                |LazyVim-lazyvim-todo|
-  - File Structure                            |LazyVim-lazyvim-file-structure|
   - Plugins                                          |LazyVim-lazyvim-plugins|
 2. Links                                                       |LazyVim-links|
 
 ==============================================================================
 1. LazyVim                                                   *LazyVim-lazyvim*
 
-A starter template for Neovim using lazy.nvim
+Basic IDE for lazy Neovim users using lazy.nvim
 <https://github.com/folke/lazy.nvim>
+
+
+GETTING STARTED                              *LazyVim-lazyvim-getting-started*
+
+You can find a starter template for **LazyVim** here
+<https://github.com/LazyVim/starter>
 
 
 TODO                                                    *LazyVim-lazyvim-todo*
@@ -22,9 +28,6 @@ TODO                                                    *LazyVim-lazyvim-todo*
 - treesitter auto-install seems broken. Switch to `ensure_installed` instead?
 - list all plugins in readme
 - test all-the-things
-
-
-FILE STRUCTURE                                *LazyVim-lazyvim-file-structure*
 
 
 PLUGINS                                              *LazyVim-lazyvim-plugins*
