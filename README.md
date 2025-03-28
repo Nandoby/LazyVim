@@ -1,6 +1,6 @@
 # LazyVim
 
-Basic IDE for lazy Neovim users powered by [💤 lazy.nvim](https://github.com/folke/lazy.nvim)
+Neovim config for the lazy powered by [💤 lazy.nvim](https://github.com/folke/lazy.nvim)
 
 Can't decide between building a config from scratch or using one of the existing
 Neovim "distros"?
