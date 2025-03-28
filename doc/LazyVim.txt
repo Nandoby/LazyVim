@@ -59,8 +59,11 @@ TODO                                                    *LazyVim-lazyvim-todo*
 
 KEYMAPS                                              *LazyVim-lazyvim-keymaps*
 
+**LazyVim** uses which-key.nvim <https://github.com/folke/which-key> to help
+you remember your keymaps. Just press any key like `<space>` and you’ll see a
+popup with all possible keymaps starting with `<space>`.
 
-GENERAL ~
+General ~
 
   ------------------------------------------------------------------------
   Key                  Description               Mode
@@ -109,7 +112,7 @@ GENERAL ~
 
   <leader>xq           Open Quickfix List        n
 
-  <leader>tf           Toggle Format on Save     n
+  <leader>tf           Toggle format on Save     n
 
   <leader>ts           Toggle Spelling           n
 
@@ -164,7 +167,6 @@ GENERAL ~
 
   <leader>`            Switch to Other Buffer    n
   ------------------------------------------------------------------------
-
 LSP ~
 
   Key          Description             Mode
@@ -189,8 +191,7 @@ LSP ~
   <leader>cf   Format Document         n
   <leader>cf   Format Range            v
   <leader>cr   Rename                  n
-
-PLUGINS ~
+Plugins ~
 
   ----------------------------------------------------------------------------------
   Key               Description                                               Mode
