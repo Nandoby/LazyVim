@@ -4,7 +4,7 @@ LazyVim is a Neovim setup powered by [💤 lazy.nvim](https://github.com/folke/l
 to make it easy to customize and extend your config.
 Rather than having to choose between starting from scratch or using a
 pre-made distro, LazyVim offers the best of both worlds - the flexibility
-to tweak your config as needed,
+to tweak your config as needed, along with the convenience of a pre-configured setup.
 
 ![image](https://user-images.githubusercontent.com/292349/211285846-0b7bb3bf-0462-4029-b64c-4ee1d037fc1c.png)
 
@@ -71,7 +71,90 @@ will be automatically loaded by [lazy.nvim](https://github.com/folke/lazy.nvim)
 └── init.toml
 </pre>
 
-## 🚀 Configuring **LazyVim**
+## ⚙️ Configuration
+
+**LazyVim** comes with the following defaults:
+
+<!-- config:start -->
+
+```lua
+{
+  -- colorscheme can be a string like `catppuccin` or a function that will load the colorscheme
+  ---@type string|fun()
+  colorscheme = function()
+    require("tokyonight").load()
+  end,
+  -- icons used by other plugins
+  icons = {
+    diagnostics = {
+      Error = " ",
+      Warn = " ",
+      Hint = " ",
+      Info = " ",
+    },
+    git = {
+      added = " ",
+      modified = " ",
+      removed = " ",
+    },
+    kinds = {
+      Array = " ",
+      Boolean = " ",
+      Class = " ",
+      Color = " ",
+      Constant = " ",
+      Constructor = " ",
+      Enum = " ",
+      EnumMember = " ",
+      Event = " ",
+      Field = " ",
+      File = " ",
+      Folder = " ",
+      Function = " ",
+      Interface = " ",
+      Key = " ",
+      Keyword = " ",
+      Method = " ",
+      Module = " ",
+      Namespace = " ",
+      Null = "ﳠ ",
+      Number = " ",
+      Object = " ",
+      Operator = " ",
+      Package = " ",
+      Property = " ",
+      Reference = " ",
+      Snippet = " ",
+      String = " ",
+      Struct = " ",
+      Text = " ",
+      TypeParameter = " ",
+      Unit = " ",
+      Value = " ",
+      Variable = " ",
+    },
+  },
+}
+```
+
+<!-- config:end -->
+
+**LazyVim** can be configured in the same way as any other plugin.
+
+For example in `lua/plugins/core.lua`
+
+```lua
+return {
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin",
+    }
+  }
+}
+```
+
+## 🚀 Configuring **Plugins**
 
 Configuring **LazyVim** is exactly the same as using **lazy.nvim** to build
 a config from scratch.
@@ -301,9 +384,8 @@ possible keymaps starting with `<space>`.
 | `<A-k>`              | Move up                    | **n**, **v**, **i**        |
 | `<S-h>`              | Prev buffer                | **n**                      |
 | `<S-l>`              | Next buffer                | **n**                      |
-| `[p`                 | Paste below                | **n**                      |
-| `]p`                 | Paste above                | **n**                      |
 | `<esc>`              | Escape and clear hlsearch  | **i**, **n**               |
+| `<leader>r`          | Redraw and clear hlsearch  | **n**                      |
 | `n`                  | Next search result         | **n**, **x**, **o**        |
 | `N`                  | Prev search result         | **n**, **x**, **o**        |
 | `<C-s>`              | Save file                  | **i**, **v**, **n**, **s** |
@@ -377,6 +459,8 @@ possible keymaps starting with `<space>`.
 | `<leader>bD`      | [mini.bufremove](https://github.com/echasnovski/mini.bufremove.git) Delete Buffer (Force)      | **n** |
 | `<leader>ft`      | [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim.git) NeoTree (root dir)         | **n** |
 | `<leader>fT`      | [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim.git) NeoTree (cwd)              | **n** |
+| `<leader>e`       | [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim.git) NeoTree (root dir)         | **n** |
+| `<leader>E`       | [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim.git) NeoTree (cwd)              | **n** |
 | `<S-Enter>`       | [noice.nvim](https://github.com/folke/noice.nvim.git) Redirect Cmdline                         | **c** |
 | `<leader>nl`      | [noice.nvim](https://github.com/folke/noice.nvim.git) Noice Last Message                       | **n** |
 | `<leader>nh`      | [noice.nvim](https://github.com/folke/noice.nvim.git) Noice History                            | **n** |
@@ -445,6 +529,7 @@ possible keymaps starting with `<space>`.
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
+- [LazyVim](https://github.com/LazyVim/LazyVim)
 - [leap.nvim](https://github.com/ggandor/leap.nvim)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
@@ -500,7 +585,7 @@ require("lazy").setup({
 
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [schemastore.nvim](https://github.com/b0o/schemastore.nvim)
+- [SchemaStore.nvim](https://github.com/b0o/SchemaStore.nvim)
 
 </details>
 
