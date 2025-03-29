@@ -158,7 +158,7 @@ return {
         ["<leader>o"] = { name = "+open" },
         ["<leader>q"] = { name = "+quit/session" },
         ["<leader>s"] = { name = "+search" },
-        ["<leader>t"] = { name = "+toggle" },
+        ["<leader>u"] = { name = "+toggle" },
         ["<leader>x"] = { name = "+diagnostics/quickfix" },
         ["<leader>w"] = { name = "+windows" },
         ["<leader><tab>"] = { name = "+tabs" },
