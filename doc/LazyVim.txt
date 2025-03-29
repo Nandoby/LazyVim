@@ -4,6 +4,8 @@
 Table of Contents                                  *LazyVim-table-of-contents*
 
 1. LazyVim                                                   |LazyVim-lazyvim|
+  - Features                                        |LazyVim-lazyvim-features|
+  - Requirements                                |LazyVim-lazyvim-requirements|
   - Getting Started                          |LazyVim-lazyvim-getting-started|
   - File Structure                            |LazyVim-lazyvim-file-structure|
   - Configuring LazyVim                  |LazyVim-lazyvim-configuring-lazyvim|
@@ -23,6 +25,22 @@ existing Neovim **distros**?
 With **LazyVim** you don’t have to. Configuring **LazyVim** is **exactly the
 same** as you would configure a config from scratch. You can easily add new
 plugins, change the config for existing ones or disable plugins.
+
+
+FEATURES                                            *LazyVim-lazyvim-features*
+
+- Transform your Neovim into a full-fledged IDE
+- Easily customize and extend your config with lazy.nvim <https://github.com/folke/lazy.nvim>
+- Blazingly fast startup (loads in under **20ms**)
+- Sane default settings for options, autocmds, and keymaps
+- Comes with a wealth of plugins pre-configured and ready to use
+
+
+REQUIREMENTS                                    *LazyVim-lazyvim-requirements*
+
+- Neovim >= **0.8.0** (needs to be built with **LuaJIT**)
+- Git >= **2.19.0** (for partial clones support)
+- a Nerd Font <https://www.nerdfonts.com/> **(optional)**
 
 
 GETTING STARTED                              *LazyVim-lazyvim-getting-started*
