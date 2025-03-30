@@ -272,7 +272,7 @@ Example spec: lua/plugins/example.lua ~
         },
       },
     
-      -- add tsserver and setup with typescript.
+      -- add tsserver and setup with typescript.nvim instead of lspconfig
       {
         "neovim/nvim-lspconfig",
         dependencies = {
@@ -424,13 +424,13 @@ General ~
 
   <A-k>                Move up                   n, v, i
 
-  <S-h>                Prev buffer               n
+  <leader>bb           Switch to Other Buffer    n
 
-  <S-l>                Next buffer               n
+  <leader>`            Switch to Other Buffer    n
 
   <esc>                Escape and clear hlsearch i, n
 
-  <leader>r            Redraw and clear hlsearch n
+  <leader>ur           Redraw and clear hlsearch n
 
   n                    Next search result        n, x, o
 
@@ -446,17 +446,17 @@ General ~
 
   <leader>xq           Open Quickfix List        n
 
-  <leader>tf           Toggle format on Save     n
+  <leader>uf           Toggle format on Save     n
 
-  <leader>ts           Toggle Spelling           n
+  <leader>us           Toggle Spelling           n
 
-  <leader>tw           Toggle Word Wrap          n
+  <leader>uw           Toggle Word Wrap          n
 
-  <leader>tn           Toggle Line Numbers       n
+  <leader>un           Toggle Line Numbers       n
 
-  <leader>td           Toggle Diagnostics        n
+  <leader>ud           Toggle Diagnostics        n
 
-  <leader>tc           Toggle Conceal            n
+  <leader>uc           Toggle Conceal            n
 
   <leader>gg           Lazygit (cwd)             n
 
@@ -464,12 +464,12 @@ General ~
 
   <leader>qq           Quit all                  n
 
-  <leader>hl           Highlight Groups at       n
+  <leader>sH           Highlight Groups at       n
                        cursor                    
 
-  <leader>ot           Terminal (root dir)       n
+  <leader>ft           Terminal (root dir)       n
 
-  <leader>oT           Terminal (cwd)            n
+  <leader>fT           Terminal (cwd)            n
 
   <esc><esc>           Enter Normal Mode         t
 
@@ -492,14 +492,6 @@ General ~
   <leader><tab>d       Close                     n
 
   <leader><tab>[       Previous                  n
-
-  <leader>b]           Next Buffer               n
-
-  <leader>bb           Switch to Other Buffer    n
-
-  <leader>b[           Previous Buffer           n
-
-  <leader>`            Switch to Other Buffer    n
   ------------------------------------------------------------------------
 LSP ~
 
@@ -536,27 +528,27 @@ Plugins ~
 
   <leader>bD        mini.bufremove Delete Buffer (Force)                      n
 
-  <leader>ft        neo-tree.nvim NeoTree (root dir)                          n
+  <leader>fe        neo-tree.nvim Explorer NeoTree (root dir)                 n
 
-  <leader>fT        neo-tree.nvim NeoTree (cwd)                               n
+  <leader>fE        neo-tree.nvim Explorer NeoTree (cwd)                      n
 
-  <leader>e         neo-tree.nvim NeoTree (root dir)                          n
+  <leader>e         neo-tree.nvim Explorer NeoTree (root dir)                 n
 
-  <leader>E         neo-tree.nvim NeoTree (cwd)                               n
+  <leader>E         neo-tree.nvim Explorer NeoTree (cwd)                      n
 
   <S-Enter>         noice.nvim Redirect Cmdline                               c
 
-  <leader>nl        noice.nvim Noice Last Message                             n
+  <leader>snl       noice.nvim Noice Last Message                             n
 
-  <leader>nh        noice.nvim Noice History                                  n
+  <leader>snh       noice.nvim Noice History                                  n
 
-  <leader>na        noice.nvim Noice All                                      n
+  <leader>sna       noice.nvim Noice All                                      n
 
   <c-f>             noice.nvim Scroll forward                                 n
 
   <c-b>             noice.nvim Scroll backward                                n
 
-  <leader>nd        nvim-notify Delete all Notifications                      n
+  <leader>un        nvim-notify Delete all Notifications                      n
 
   <leader>sr        nvim-spectre Replace in files (Spectre)                   n
 
@@ -566,15 +558,19 @@ Plugins ~
 
   <leader>qd        persistence.nvim Don’t Save Current Session               n
 
+  <leader>,         telescope.nvim Switch Buffer                              n
+
   <leader>/         telescope.nvim Find in Files (Grep)                       n
 
+  <leader>:         telescope.nvim Command History                            n
+
   <leader><space>   telescope.nvim Find Files (root dir)                      n
+
+  <leader>fF        telescope.nvim Find Files (cwd)                           n
 
   <leader>fb        telescope.nvim Buffers                                    n
 
   <leader>ff        telescope.nvim Find Files (root dir)                      n
-
-  <leader>fF        telescope.nvim Find Files (cwd)                           n
 
   <leader>fr        telescope.nvim Recent                                     n
 
@@ -582,23 +578,21 @@ Plugins ~
 
   <leader>gs        telescope.nvim status                                     n
 
-  <leader>ha        telescope.nvim Auto Commands                              n
+  <leader>sa        telescope.nvim Auto Commands                              n
 
-  <leader>hc        telescope.nvim Commands                                   n
+  <leader>sC        telescope.nvim Commands                                   n
 
-  <leader>hf        telescope.nvim File Types                                 n
+  <leader>so        telescope.nvim Options                                    n
 
-  <leader>hh        telescope.nvim Help Pages                                 n
+  <leader>st        telescope.nvim Telescope                                  n
 
-  <leader>hk        telescope.nvim Key Maps                                   n
+  <leader>sh        telescope.nvim Search Highlight Groups                    n
 
-  <leader>hm        telescope.nvim Man Pages                                  n
+  <leader>sG        telescope.nvim Grep (cwd)                                 n
 
-  <leader>ho        telescope.nvim Options                                    n
+  <leader>sk        telescope.nvim Key Maps                                   n
 
-  <leader>hs        telescope.nvim Search Highlight Groups                    n
-
-  <leader>ht        telescope.nvim Telescope                                  n
+  <leader>sM        telescope.nvim Man Pages                                  n
 
   <leader>sb        telescope.nvim Buffer                                     n
 
@@ -606,13 +600,9 @@ Plugins ~
 
   <leader>sg        telescope.nvim Grep (root dir)                            n
 
-  <leader>sG        telescope.nvim Grep (cwd)                                 n
+  <leader>sh        telescope.nvim Help Pages                                 n
 
   <leader>sm        telescope.nvim Jump to Mark                               n
-
-  <leader>,         telescope.nvim Switch Buffer                              n
-
-  <leader>:         telescope.nvim Command History                            n
 
   <leader>ss        telescope.nvim Goto Symbol                                n
 
