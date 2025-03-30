@@ -452,7 +452,7 @@ General ~
 
   <leader>uw           Toggle Word Wrap          n
 
-  <leader>un           Toggle Line Numbers       n
+  <leader>ul           Toggle Line Numbers       n
 
   <leader>ud           Toggle Diagnostics        n
 
