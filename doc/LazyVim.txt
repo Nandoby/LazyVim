@@ -389,6 +389,58 @@ Example spec: lua/plugins/example.lua ~
           },
         },
       },
+    
+      -- Use <tab> for completion and snippets (supertab)
+      -- first: disable default <tab> and <s-tab> behavior in LuaSnip
+      {
+        "L3MON4D3/LuaSnip",
+        keys = function()
+          return {}
+        end,
+      },
+      -- then: setup supertab in cmp
+      {
+        "hrsh7th/nvim-cmp",
+        dependencies = {
+          "hrsh7th/cmp-emoji",
+        },
+        ---@param opts cmp.ConfigSchema
+        opts = function(_, opts)
+          local has_words_before = function()
+            unpack = unpack or table.unpack
+            local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+            return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+          end
+    
+          local luasnip = require("luasnip")
+          local cmp = require("cmp")
+    
+          opts.mapping = vim.tbl_extend("force", opts.mapping, {
+            ["<Tab>"] = cmp.mapping(function(fallback)
+              if cmp.visible() then
+                cmp.select_next_item()
+                -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
+                -- they way you will only jump inside the snippet region
+              elseif luasnip.expand_or_jumpable() then
+                luasnip.expand_or_jump()
+              elseif has_words_before() then
+                cmp.complete()
+              else
+                fallback()
+              end
+            end, { "i", "s" }),
+            ["<S-Tab>"] = cmp.mapping(function(fallback)
+              if cmp.visible() then
+                cmp.select_prev_item()
+              elseif luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+              else
+                fallback()
+              end
+            end, { "i", "s" }),
+          })
+        end,
+      },
     }
 <
 
@@ -401,98 +453,102 @@ see a popup with all possible keymaps starting with `<space>`.
 
 General ~
 
-  ------------------------------------------------------------------------
-  Key                  Description               Mode
-  -------------------- ------------------------- -------------------------
-  <C-h>                Go to left window         n
+  ---------------------------------------------------------------------------
+  Key                  Description                     Mode
+  -------------------- ------------------------------- ----------------------
+  <C-h>                Go to left window               n
 
-  <C-j>                Go to lower window        n
+  <C-j>                Go to lower window              n
 
-  <C-k>                Go to upper window        n
+  <C-k>                Go to upper window              n
 
-  <C-l>                Go to right window        n
+  <C-l>                Go to right window              n
 
-  <C-Up>               Increase window height    n
+  <C-Up>               Increase window height          n
 
-  <C-Down>             Decrease window height    n
+  <C-Down>             Decrease window height          n
 
-  <C-Left>             Decrease window width     n
+  <C-Left>             Decrease window width           n
 
-  <C-Right>            Increase window width     n
+  <C-Right>            Increase window width           n
 
-  <A-j>                Move down                 n, v, i
+  <A-j>                Move down                       n, v, i
 
-  <A-k>                Move up                   n, v, i
+  <A-k>                Move up                         n, v, i
 
-  <leader>bb           Switch to Other Buffer    n
+  <leader>bb           Switch to Other Buffer          n
 
-  <leader>`            Switch to Other Buffer    n
+  <leader>`            Switch to Other Buffer          n
 
-  <esc>                Escape and clear hlsearch i, n
+  <esc>                Escape and clear hlsearch       i, n
 
-  <leader>ur           Redraw and clear hlsearch n
+  <leader>ur           Redraw / clear hlsearch / diff  n
+                       update                          
 
-  n                    Next search result        n, x, o
+  n                    Next search result              n, x, o
 
-  N                    Prev search result        n, x, o
+  N                    Prev search result              n, x, o
 
-  <C-s>                Save file                 i, v, n, s
+  <C-s>                Save file                       i, v, n, s
 
-  <leader>l            Lazy                      n
+  <leader>l            Lazy                            n
 
-  <leader>fn           New File                  n
+  <leader>fn           New File                        n
 
-  <leader>xl           Open Location List        n
+  <leader>xl           Open Location List              n
 
-  <leader>xq           Open Quickfix List        n
+  <leader>xq           Open Quickfix List              n
 
-  <leader>uf           Toggle format on Save     n
+  <leader>uf           Toggle format on Save           n
 
-  <leader>us           Toggle Spelling           n
+  <leader>us           Toggle Spelling                 n
 
-  <leader>uw           Toggle Word Wrap          n
+  <leader>uw           Toggle Word Wrap                n
 
-  <leader>ul           Toggle Line Numbers       n
+  <leader>ul           Toggle Line Numbers             n
 
-  <leader>ud           Toggle Diagnostics        n
+  <leader>ud           Toggle Diagnostics              n
 
-  <leader>uc           Toggle Conceal            n
+  <leader>uc           Toggle Conceal                  n
 
-  <leader>gg           Lazygit (cwd)             n
+  <leader>gg           Lazygit (cwd)                   n
 
-  <leader>gG           Lazygit (root dir)        n
+  <leader>gG           Lazygit (root dir)              n
 
-  <leader>qq           Quit all                  n
+  <leader>qq           Quit all                        n
 
-  <leader>sH           Highlight Groups at       n
-                       cursor                    
+  <leader>sH           Highlight Groups at cursor      n
 
-  <leader>ft           Terminal (root dir)       n
+  <leader>ft           Terminal (root dir)             n
 
-  <leader>fT           Terminal (cwd)            n
+  <leader>fT           Terminal (cwd)                  n
 
-  <esc><esc>           Enter Normal Mode         t
+  <esc><esc>           Enter Normal Mode               t
 
-  <leader>ww           other-window              n
+  <leader>ww           Other window                    n
 
-  <leader>wd           delete-window             n
+  <leader>wd           Delete window                   n
 
-  <leader>w-           split-window-below        n
+  <leader>w-           Split window below              n
 
-  <leader>w\|          split-window-right        n
+  <leader>w\|          Split window right              n
 
-  <leader><tab>l       Last                      n
+  <leader>-            Split window below              n
 
-  <leader><tab>f       First                     n
+  <leader>\|           Split window right              n
 
-  <leader><tab><tab>   New Tab                   n
+  <leader><tab>l       Last                            n
 
-  <leader><tab>]       Next                      n
+  <leader><tab>f       First                           n
 
-  <leader><tab>d       Close                     n
+  <leader><tab><tab>   New Tab                         n
 
-  <leader><tab>[       Previous                  n
-  ------------------------------------------------------------------------
+  <leader><tab>]       Next                            n
+
+  <leader><tab>d       Close                           n
+
+  <leader><tab>[       Previous                        n
+  ---------------------------------------------------------------------------
 LSP ~
 
   Key          Description             Mode
@@ -507,8 +563,9 @@ LSP ~
   gt           Goto Type Definition    n
   K            Hover                   n
   gK           Signature Help          n
-  [d           Next Diagnostic         n
-  ]d           Prev Diagnostic         n
+  <c-k>        Signature Help          i
+  ]d           Next Diagnostic         n
+  [d           Prev Diagnostic         n
   ]e           Next Error              n
   [e           Prev Error              n
   ]w           Next Warning            n
@@ -519,111 +576,135 @@ LSP ~
   <leader>cr   Rename                  n
 Plugins ~
 
-  ----------------------------------------------------------------------------------
-  Key               Description                                               Mode
-  ----------------- --------------------------------------------------------- ------
-  <leader>cm        mason.nvim Mason                                          n
+  --------------------------------------------------------------------------------
+  Key               Description                                             Mode
+  ----------------- ------------------------------------------------------- ------
+  <leader>cm        mason.nvim Mason                                        n
 
-  <leader>bd        mini.bufremove Delete Buffer                              n
+  <leader>bd        mini.bufremove Delete Buffer                            n
 
-  <leader>bD        mini.bufremove Delete Buffer (Force)                      n
+  <leader>bD        mini.bufremove Delete Buffer (Force)                    n
 
-  <leader>fe        neo-tree.nvim Explorer NeoTree (root dir)                 n
+  gza               mini.surround Add surrounding                           n, v
 
-  <leader>fE        neo-tree.nvim Explorer NeoTree (cwd)                      n
+  gzd               mini.surround Delete surrounding                        n
 
-  <leader>e         neo-tree.nvim Explorer NeoTree (root dir)                 n
+  gzf               mini.surround Find right surrounding                    n
 
-  <leader>E         neo-tree.nvim Explorer NeoTree (cwd)                      n
+  gzF               mini.surround Find left surrounding                     n
 
-  <S-Enter>         noice.nvim Redirect Cmdline                               c
+  gzh               mini.surround Highlight surrounding                     n
 
-  <leader>snl       noice.nvim Noice Last Message                             n
+  gzr               mini.surround Replace surrounding                       n
 
-  <leader>snh       noice.nvim Noice History                                  n
+  gzn               mini.surround Update MiniSurround.config.n_lines        n
 
-  <leader>sna       noice.nvim Noice All                                      n
+  <leader>fe        neo-tree.nvim Explorer NeoTree (root dir)               n
 
-  <c-f>             noice.nvim Scroll forward                                 n
+  <leader>fE        neo-tree.nvim Explorer NeoTree (cwd)                    n
 
-  <c-b>             noice.nvim Scroll backward                                n
+  <leader>e         neo-tree.nvim Explorer NeoTree (root dir)               n
 
-  <leader>un        nvim-notify Delete all Notifications                      n
+  <leader>E         neo-tree.nvim Explorer NeoTree (cwd)                    n
 
-  <leader>sr        nvim-spectre Replace in files (Spectre)                   n
+  <S-Enter>         noice.nvim Redirect Cmdline                             c
 
-  <leader>qs        persistence.nvim Restore Session                          n
+  <leader>snl       noice.nvim Noice Last Message                           n
 
-  <leader>ql        persistence.nvim Restore Last Session                     n
+  <leader>snh       noice.nvim Noice History                                n
 
-  <leader>qd        persistence.nvim Don’t Save Current Session               n
+  <leader>sna       noice.nvim Noice All                                    n
 
-  <leader>,         telescope.nvim Switch Buffer                              n
+  <c-f>             noice.nvim Scroll forward                               n
 
-  <leader>/         telescope.nvim Find in Files (Grep)                       n
+  <c-b>             noice.nvim Scroll backward                              n
 
-  <leader>:         telescope.nvim Command History                            n
+  <leader>un        nvim-notify Delete all Notifications                    n
 
-  <leader><space>   telescope.nvim Find Files (root dir)                      n
+  <leader>sr        nvim-spectre Replace in files (Spectre)                 n
 
-  <leader>fF        telescope.nvim Find Files (cwd)                           n
+  <c-space>         nvim-treesitter Increment selection                     n
 
-  <leader>fb        telescope.nvim Buffers                                    n
+  <c-bs>            nvim-treesitter Schrink selection                       n
 
-  <leader>ff        telescope.nvim Find Files (root dir)                      n
+  <leader>qs        persistence.nvim Restore Session                        n
 
-  <leader>fr        telescope.nvim Recent                                     n
+  <leader>ql        persistence.nvim Restore Last Session                   n
 
-  <leader>gc        telescope.nvim commits                                    n
+  <leader>qd        persistence.nvim Don’t Save Current Session             n
 
-  <leader>gs        telescope.nvim status                                     n
+  <leader>,         telescope.nvim Switch Buffer                            n
 
-  <leader>sa        telescope.nvim Auto Commands                              n
+  <leader>/         telescope.nvim Find in Files (Grep)                     n
 
-  <leader>sC        telescope.nvim Commands                                   n
+  <leader>:         telescope.nvim Command History                          n
 
-  <leader>so        telescope.nvim Options                                    n
+  <leader><space>   telescope.nvim Find Files (root dir)                    n
 
-  <leader>st        telescope.nvim Telescope                                  n
+  <leader>fb        telescope.nvim Buffers                                  n
 
-  <leader>sh        telescope.nvim Search Highlight Groups                    n
+  <leader>ff        telescope.nvim Find Files (root dir)                    n
 
-  <leader>sG        telescope.nvim Grep (cwd)                                 n
+  <leader>fF        telescope.nvim Find Files (cwd)                         n
 
-  <leader>sk        telescope.nvim Key Maps                                   n
+  <leader>fr        telescope.nvim Recent                                   n
 
-  <leader>sM        telescope.nvim Man Pages                                  n
+  <leader>gc        telescope.nvim commits                                  n
 
-  <leader>sb        telescope.nvim Buffer                                     n
+  <leader>gs        telescope.nvim status                                   n
 
-  <leader>sc        telescope.nvim Command History                            n
+  <leader>sa        telescope.nvim Auto Commands                            n
 
-  <leader>sg        telescope.nvim Grep (root dir)                            n
+  <leader>sb        telescope.nvim Buffer                                   n
 
-  <leader>sh        telescope.nvim Help Pages                                 n
+  <leader>sc        telescope.nvim Command History                          n
 
-  <leader>sm        telescope.nvim Jump to Mark                               n
+  <leader>sC        telescope.nvim Commands                                 n
 
-  <leader>ss        telescope.nvim Goto Symbol                                n
+  <leader>sg        telescope.nvim Grep (root dir)                          n
 
-  ]t                todo-comments.nvim Next todo comment                      n
+  <leader>sG        telescope.nvim Grep (cwd)                               n
 
-  [t                todo-comments.nvim Previous todo comment                  n
+  <leader>sh        telescope.nvim Help Pages                               n
 
-  <leader>xt        todo-comments.nvim Todo Trouble                           n
+  <leader>sH        telescope.nvim Search Highlight Groups                  n
 
-  <leader>xtt       todo-comments.nvim Todo Trouble                           n
+  <leader>sk        telescope.nvim Key Maps                                 n
 
-  <leader>xT        todo-comments.nvim Todo Telescope                         n
+  <leader>sM        telescope.nvim Man Pages                                n
 
-  <leader>xx        trouble.nvim Document Diagnostics (Trouble)               n
+  <leader>sm        telescope.nvim Jump to Mark                             n
 
-  <leader>xX        trouble.nvim Workspace Diagnostics (Trouble)              n
+  <leader>so        telescope.nvim Options                                  n
 
-  ]]                vim-illuminate Next Reference                             n
+  <leader>st        telescope.nvim Telescope                                n
 
-  [[                vim-illuminate Prev Reference                             n
-  ----------------------------------------------------------------------------------
+  <leader>sw        telescope.nvim Word (root dir)                          n
+
+  <leader>sW        telescope.nvim Word (cwd)                               n
+
+  <leader>uC        telescope.nvim Colorscheme with preview                 n
+
+  <leader>ss        telescope.nvim Goto Symbol                              n
+
+  ]t                todo-comments.nvim Next todo comment                    n
+
+  [t                todo-comments.nvim Previous todo comment                n
+
+  <leader>xt        todo-comments.nvim Todo Trouble                         n
+
+  <leader>xtt       todo-comments.nvim Todo Trouble                         n
+
+  <leader>xT        todo-comments.nvim Todo Telescope                       n
+
+  <leader>xx        trouble.nvim Document Diagnostics (Trouble)             n
+
+  <leader>xX        trouble.nvim Workspace Diagnostics (Trouble)            n
+
+  ]]                vim-illuminate Next Reference                           n
+
+  [[                vim-illuminate Prev Reference                           n
+  --------------------------------------------------------------------------------
 
 PLUGINS                                              *LazyVim-lazyvim-plugins*
 
@@ -676,6 +757,7 @@ Core ~
 - tokyonight.nvim <https://github.com/folke/tokyonight.nvim>
 - trouble.nvim <https://github.com/folke/trouble.nvim>
 - vim-illuminate <https://github.com/RRethy/vim-illuminate>
+- vim-repeat <https://github.com/tpope/vim-repeat>
 - vim-startuptime <https://github.com/dstein64/vim-startuptime>
 - which-key.nvim <https://github.com/folke/which-key.nvim>
 
