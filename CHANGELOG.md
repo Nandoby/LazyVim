@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.3.0-alpha](https://github.com/Nandoby/LazyVim/compare/v0.2.2-alpha...v0.3.0-alpha) (2025-03-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **todo:** `<leader>xtt` => `<leader>xT`
+* **todo:** moved search todo to `<leader>st`
+* **telescope:** moved search diagnostics to `<leader>sd`
+
+### Bug Fixes
+
+* **keymaps:** added inspect to `&lt;leader&gt;ui` ([0b2c7c0](https://github.com/Nandoby/LazyVim/commit/0b2c7c00216718f81744f35b16c9c81087fcceb0))
+
+
+### Code Refactoring
+
+* **telescope:** moved search diagnostics to `&lt;leader&gt;sd` ([1f2a066](https://github.com/Nandoby/LazyVim/commit/1f2a0661672c050c957ad90eb2f6f4f21dda9a28))
+* **todo:** `&lt;leader&gt;xtt` => `<leader>xT` ([6c41e06](https://github.com/Nandoby/LazyVim/commit/6c41e0627ece6e731e8c0919c35689fb607252f3))
+* **todo:** moved search todo to `&lt;leader&gt;st` ([365cf86](https://github.com/Nandoby/LazyVim/commit/365cf86eaf03f6c3f640b36b88283c26c1d4855b))
+
 ## [0.2.2-alpha](https://github.com/Nandoby/LazyVim/compare/v0.2.1-alpha...v0.2.2-alpha) (2025-03-30)
 
 
