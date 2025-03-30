@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.2.1-alpha](https://github.com/Nandoby/LazyVim/compare/v0.2.0-alpha...v0.2.1-alpha) (2025-03-30)
+
+
+### Features
+
+* **keymaps:** added shortcuts for split and vsplit `&lt;leader&gt;` and `<leader>|` ([75518ba](https://github.com/Nandoby/LazyVim/commit/75518babfd6e38f8493f97d0557f28d59fec1894))
+* **mini.surround:** added lazy keys with descriptions to mini.surround ([48c12fd](https://github.com/Nandoby/LazyVim/commit/48c12fd5ea8d155f66b3cd2165d0c3a947c14660))
+* **telescope:** added mappings for grep_string `&lt;leader&gt;sw` and colorscheme `<leader>uC` ([859042d](https://github.com/Nandoby/LazyVim/commit/859042d02daf152b3ec24ae4e80ff40345002052))
+* **treesitter:** added incremental selection ([916d4b6](https://github.com/Nandoby/LazyVim/commit/916d4b64dad32c5285f6ca30b6a95d028dd9a49a))
+
+
+### Bug Fixes
+
+* **version:** don't use version for schemastore and nvim-cmp. Last version is too old ([2c27f52](https://github.com/Nandoby/LazyVim/commit/2c27f526b39ec529ad85689f79b5f1e79fe92279))
+
 ## [0.2.0-alpha](https://github.com/Nandoby/LazyVim/compare/v0.1.0-alpha...v0.2.0-alpha) (2025-03-30)
 
 
