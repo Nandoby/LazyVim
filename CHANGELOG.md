@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2-alpha](https://github.com/Nandoby/LazyVim/compare/v0.2.1-alpha...v0.2.2-alpha) (2025-03-30)
+
+
+### Bug Fixes
+
+* **windows:** set version=false for treesitter. Last release is too old and broken n Windows ([2d5c2ee](https://github.com/Nandoby/LazyVim/commit/2d5c2ee1dc95964ac582cd9c45c701b929c7bf3d))
+
 ## [0.2.1-alpha](https://github.com/Nandoby/LazyVim/compare/v0.2.0-alpha...v0.2.1-alpha) (2025-03-30)
 
 
