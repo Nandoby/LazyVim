@@ -20,6 +20,16 @@ function M.has(plugin)
   return require("lazy.core.config").plugins[plugin] ~= nil
 end
 
+---@param name string
+function M.opts(name)
+  local plugin = require("lazy.core.config").plugins[name]
+  if not plugin then
+    return {}
+  end
+  local Plugin = require("lazy.core.plugin")
+  return Plugin.values(plugin, "opts", false)
+end
+
 -- returns the root directory based on:
 -- * lsp workspace folders
 -- * lsp root_dir
@@ -36,7 +46,7 @@ function M.get_root()
     for _, client in pairs(vim.lsp.get_active_clients({ bufnr = 0 })) do
       local workspace = client.config.workspace_folders
       local paths = workspace and vim.tbl_map(function (ws)
-        return vim.uri_to_fname(ws.uri) 
+        return vim.uri_to_fname(ws.uri)
       end, workspace) or client.config.root_dir and { client.config.root_dir } or {}
       for _, p in ipairs(paths) do
         local r = vim.loop.fs_realpath(p)
