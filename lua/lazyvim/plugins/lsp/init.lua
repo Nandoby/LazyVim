@@ -22,6 +22,10 @@ return {
       -- options for vim.lsp.buf.format
       -- `bufnr` and `filter` is handled by the LazyVim formatter,
       -- but can be also overriden when specified
+      format = {
+        formatting_options = nil,
+        timeout_ms = nil,
+      },
       ---@type lspconfig.options
       servers = {
         jsonls = {},
@@ -54,14 +58,14 @@ return {
     ---@param opts PluginLspOpts
     config = function(plugin, opts)
       if plugin.servers then
-        require("lazyvim.util.init").deprecate("lspconfig.servers", "lspconfig.opts.servers")
+        require("lazyvim.util").deprecate("lspconfig.servers", "lspconfig.opts.servers")
       end
       if plugin.setup_server then
-        require("lazyvim.util.init").deprecate("lspconfig.setup_server", "lspconfig.opts.setup[SERVER]")
+        require("lazyvim.util").deprecate("lspconfig.setup_server", "lspconfig.opts.setup[SERVER]")
       end
 
       -- setup formatting and keymaps
-      require("lazyvim.util.init").on_attach(function(client, buffer)
+      require("lazyvim.util").on_attach(function(client, buffer)
         require("lazyvim.plugins.lsp.format").on_attach(client, buffer)
         require("lazyvim.plugins.lsp.keymaps").on_attach(client, buffer)
       end)
@@ -130,7 +134,7 @@ return {
     ---@param opts MasonSettings | {ensure_installed: string[]}
     config = function(plugin, opts)
       if plugin.ensure_installed then
-        require("lazyvim.util.init").deprecate("treesitter.ensure_installed", "treesitter.opts.ensure_installed")
+        require("lazyvim.util").deprecate("treesitter.ensure_installed", "treesitter.opts.ensure_installed")
       end
       require("mason").setup(opts)
       local mr = require("mason-registry")
