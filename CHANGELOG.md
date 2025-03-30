@@ -1,5 +1,78 @@
 # Changelog
 
+## [0.2.0-alpha](https://github.com/Nandoby/LazyVim/compare/v0.1.0-alpha...v0.2.0-alpha) (2025-03-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **telescope:** moved most `help` keymaps under `<leader>s` (search)
+* **neotree:** keymaps are now under `<leader>fe` and `<leader>fE`
+* **noice:** noice keymaps are now under `<leader>sn`
+* **keymaps:** terminal keymaps are now under `<leader>ft` and `<leader>fT`
+* **keymaps:** redraw is now mapped to `<leader>ur` (UI redraw)
+* **keymaps:** toggle keymaps can now be found under UI `<leader>u`
+* **colorscheme:** LazyVim now loads the colorscheme configured with config.colorscheme. See the docs for more info
+* **config:** LazyVim can now be configured like any other plugin with {"LazyVim/LazyVim", opts = ... }. config.settings is deprecated
+* **keymaps:** remove keymaps for [p and ]p
+
+### Features
+
+* added vim-repeat. Fixes [#56](https://github.com/Nandoby/LazyVim/issues/56) ([d244117](https://github.com/Nandoby/LazyVim/commit/d244117831a9084cd959b3588affd6fb00e1a7dc))
+* **autocmds:** rebalance windows on resize ([7bb3042](https://github.com/Nandoby/LazyVim/commit/7bb30429d766dd90f1dce698dfffdc0b75a29557))
+* **colorscheme:** LazyVim now loads the colorscheme configured with config.colorscheme. See the docs for more info ([1075f10](https://github.com/Nandoby/LazyVim/commit/1075f10c245a6cad646d554e8c80ddce8b803bbf))
+* **config:** LazyVim can now be configured like any other plugin with {"LazyVim/LazyVim", opts = ... }. config.settings is deprecated ([6abb8e2](https://github.com/Nandoby/LazyVim/commit/6abb8e2db1f814369ff58eb31d33a3bc6c151dc8))
+* **config:** show an error when the needed version of `lazy.nvim` is too old ([4c1f3bb](https://github.com/Nandoby/LazyVim/commit/4c1f3bbc87da115d928e7563587e28ab26cad136))
+* **keymaps:** added `&lt;leader&gt;r` to redraw and clear hlsearch ([0569009](https://github.com/Nandoby/LazyVim/commit/056900951e6979f7cca2492b03e98c39cb18a9e9))
+* **keymaps:** redraw is now mapped to `&lt;leader&gt;ur` (UI redraw) ([34604f7](https://github.com/Nandoby/LazyVim/commit/34604f71585dad2e52757b78e0a859d98a5eb378))
+* **keymaps:** remove keymaps for [p and ]p ([409024c](https://github.com/Nandoby/LazyVim/commit/409024cf0d091046bf0fd184b0c10f63cf6d0cfd))
+* **keymaps:** toggle keymaps can now be found under UI `&lt;leader&gt;u` ([5f4e01d](https://github.com/Nandoby/LazyVim/commit/5f4e01d6e38a4c1a82f99ede07724b6d77942d9e))
+* **lsp:** added `&lt;c-k&gt;` for signature help in insert mode ([d5867b2](https://github.com/Nandoby/LazyVim/commit/d5867b26463c99138c6cd85fe1b04e4e5cb2145f))
+* **lsp:** added `opts.autoformat` to be able to disable autoformat by default. Fixes ([df36446](https://github.com/Nandoby/LazyVim/commit/df364469d67578fc154d062a44b1b9effc6e790c))
+* **lsp:** allow overriding options for vim.lsp.buf.format ([6714c5b](https://github.com/Nandoby/LazyVim/commit/6714c5b7ca2a8b6526befb00b09b55b35a08f2b4))
+* **lsp:** make diagnostics configurable with `{"neovim/nvim-lspconfig", opts = {diagnostics = {}}}`. Fixes ([d0cf306](https://github.com/Nandoby/LazyVim/commit/d0cf3061904fab597435eda35600b4ad226764e4))
+* **neo-tree:** added `&lt;leader&gt;e` and `<leader>E` to toggle neo-tree ([9ab4075](https://github.com/Nandoby/LazyVim/commit/9ab4075dcc13c9c48645730211a708703b840d9c))
+* **neo-tree:** load neo-tree when specifying a directory on the cmdline ([260bd8a](https://github.com/Nandoby/LazyVim/commit/260bd8a61759c423464ced4ad2252eeac633476e))
+* **notify:** delay notifs till replaced or at most 500ms to prevent more prompts ([fa563f3](https://github.com/Nandoby/LazyVim/commit/fa563f350ee9915095e4bb52e3ef64a94ff11e37))
+* **notify:** lazy-load nvim-notify to show proper notifs before Noice loads ([78b3e50](https://github.com/Nandoby/LazyVim/commit/78b3e50b5921b1a0e69e945fcad999bae6878ecf))
+* **util:** use lazy's notify instead of `vim.notify` ([7720962](https://github.com/Nandoby/LazyVim/commit/77209624c61569a9ccb96c9abbcb6f5295611dc1))
+
+
+### Bug Fixes
+
+* add tsx treesitter to typescript lang module ([bd64985](https://github.com/Nandoby/LazyVim/commit/bd64985b3d05921e40ce7159b8426bf34402fdfa))
+* **autocmds:** load autocmds during startup when argc &gt; 0 ([b8ee373](https://github.com/Nandoby/LazyVim/commit/b8ee373108637dd527ba0ead876724da1bf9d2de))
+* **bufferline:** load bufferline on VeryLazy event ([693b060](https://github.com/Nandoby/LazyVim/commit/693b06047fbfd90b9ffc7257d9d7fde7e4954c87))
+* **format:** typo timeout -&gt; timeout_ms ([489acb5](https://github.com/Nandoby/LazyVim/commit/489acb56ab2c8afa7dd2bfd89636efb236efdbb9))
+* **json:** correct case for SchemaStore.nvim ([d85b143](https://github.com/Nandoby/LazyVim/commit/d85b1434e54e9762bf37fd150231f1ce7aa58f35))
+* **keymaps:** `&lt;leader&gt;ur` now does the same as Neovim's better `<c-l>` ([198c618](https://github.com/Nandoby/LazyVim/commit/198c618a3cb1c5ef033b5a6017cf6c3eb35e2353))
+* **keymaps:** add missing wk entries for buffer switching; lowercase UI in menu ([22b1f84](https://github.com/Nandoby/LazyVim/commit/22b1f849dba85ad385566a79973e9985951ffcfe))
+* **keymaps:** Add unique keymap to toggle relative number ([9c5a174](https://github.com/Nandoby/LazyVim/commit/9c5a174d73b72c11f66140ad009868981fe4ce61))
+* **keymaps:** Resolve comment after PR got merged ([88f6ea8](https://github.com/Nandoby/LazyVim/commit/88f6ea887dccbaf7c980cb7603930ce6c6cea148))
+* **lsp:** `]d` & `[d` was reversed ([6ccff47](https://github.com/Nandoby/LazyVim/commit/6ccff47892a8643cdee6d5b79befa3296c77be5e))
+* **luasnip:** don't set remap=true for `&lt;tab&gt;`. Fixes ([f74bdde](https://github.com/Nandoby/LazyVim/commit/f74bdde2f8f74c31ee58db9fec05d2e52a0886e7))
+* **neodev:** use opts instead of config ([1f2b32d](https://github.com/Nandoby/LazyVim/commit/1f2b32d8b49a1553da523fba5dea8c1e330fcdc7))
+* **options:** set options with `vim.set_global` ([f87a067](https://github.com/Nandoby/LazyVim/commit/f87a067b32432372521c93ceda55eb3b5405724f))
+* **options:** use `vim.opt` and trigger Lazy ui reload when needed. Fixes ([86f369f](https://github.com/Nandoby/LazyVim/commit/86f369f940804fd38aefa9a5c3da906306df7006))
+* **plugins:** fix the laziness of all plugins to still work as intended with `config.defaults.lazy = false`. Fixes ([e707bc9](https://github.com/Nandoby/LazyVim/commit/e707bc95ac92e3598ba62765b30ef7e0ce3a6e15))
+* **telescope:** highlights are now under `&lt;leader&gt;sH` ([ebf17cb](https://github.com/Nandoby/LazyVim/commit/ebf17cb41cb4c990eb91e41ebd28121c49ac2b93))
+* **typescript:** only set ts keymaps for tsserver ([e57e855](https://github.com/Nandoby/LazyVim/commit/e57e8550afdd60e5405e9352ad7820e3af82460e))
+* **typescript:** properly check client.name is on_attach ([186cdbf](https://github.com/Nandoby/LazyVim/commit/186cdbf5d01103c3226393ba1477251fb2fdf605))
+* **util:** prevent loop for now. Still need to figure out what's causing it ([082f56f](https://github.com/Nandoby/LazyVim/commit/082f56f1891e05a585e615a63dfb4d3664a72f0a))
+* **util:** proper fix for lazy notify ([30ee0af](https://github.com/Nandoby/LazyVim/commit/30ee0af4817a7426ef94ae70bbad0bc7f57ce2e0))
+
+
+### Performance Improvements
+
+* **neodev:** enable experimental pathStrict setting for better sumneko performance ([664f791](https://github.com/Nandoby/LazyVim/commit/664f791b1f36f9b95aacaafb5dd340410dddb084))
+
+
+### Code Refactoring
+
+* **keymaps:** terminal keymaps are now under `&lt;leader&gt;ft` and `<leader>fT` ([534f644](https://github.com/Nandoby/LazyVim/commit/534f644d8e9d9cc4834912e56ba2bd1b90dd65f7))
+* **neotree:** keymaps are now under `&lt;leader&gt;fe` and `<leader>fE` ([cec2fa1](https://github.com/Nandoby/LazyVim/commit/cec2fa103131ba566772877a9caf804f2419bdf3))
+* **noice:** noice keymaps are now under `&lt;leader&gt;sn` ([1217a35](https://github.com/Nandoby/LazyVim/commit/1217a359f949508e11c48ba53e14e632d787e2b8))
+* **telescope:** moved most `help` keymaps under `&lt;leader&gt;s` (search) ([ff49685](https://github.com/Nandoby/LazyVim/commit/ff4968542e9aa4ec5b80fc4e1b15a8d5aedc7e9c))
+
 ## 0.1.0-alpha (2025-03-29)
 
 
