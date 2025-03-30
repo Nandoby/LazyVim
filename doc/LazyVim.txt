@@ -517,7 +517,7 @@ General ~
 
   <leader>qq           Quit all                        n
 
-  <leader>sH           Highlight Groups at cursor      n
+  <leader>ui           Inspect Pos                     n
 
   <leader>ft           Terminal (root dir)             n
 
@@ -551,29 +551,28 @@ General ~
   ---------------------------------------------------------------------------
 LSP ~
 
-  Key          Description             Mode
-  ------------ ----------------------- ------
-  <leader>cd   Line Diagnostics        n
-  <leader>cl   Lsp Info                n
-  <leader>xd   Telescope Diagnostics   n
-  gd           Goto Definition         n
-  gr           References              n
-  gD           Goto Declaration        n
-  gI           Goto Implementation     n
-  gt           Goto Type Definition    n
-  K            Hover                   n
-  gK           Signature Help          n
-  <c-k>        Signature Help          i
-  ]d           Next Diagnostic         n
-  [d           Prev Diagnostic         n
-  ]e           Next Error              n
-  [e           Prev Error              n
-  ]w           Next Warning            n
-  [w           Prev Warning            n
-  <leader>ca   Code Action             n, v
-  <leader>cf   Format Document         n
-  <leader>cf   Format Range            v
-  <leader>cr   Rename                  n
+  Key          Description            Mode
+  ------------ ---------------------- ------
+  <leader>cd   Line Diagnostics       n
+  <leader>cl   Lsp Info               n
+  gd           Goto Definition        n
+  gr           References             n
+  gD           Goto Declaration       n
+  gI           Goto Implementation    n
+  gt           Goto Type Definition   n
+  K            Hover                  n
+  gK           Signature Help         n
+  <c-k>        Signature Help         i
+  ]d           Next Diagnostic        n
+  [d           Prev Diagnostic        n
+  ]e           Next Error             n
+  [e           Prev Error             n
+  ]w           Next Warning           n
+  [w           Prev Warning           n
+  <leader>ca   Code Action            n, v
+  <leader>cf   Format Document        n
+  <leader>cf   Format Range           v
+  <leader>cr   Rename                 n
 Plugins ~
 
   --------------------------------------------------------------------------------
@@ -625,7 +624,7 @@ Plugins ~
 
   <c-space>         nvim-treesitter Increment selection                     n
 
-  <c-bs>            nvim-treesitter Schrink selection                       n
+  <bs>              nvim-treesitter Schrink selection                       x
 
   <leader>qs        persistence.nvim Restore Session                        n
 
@@ -661,6 +660,8 @@ Plugins ~
 
   <leader>sC        telescope.nvim Commands                                 n
 
+  <leader>sd        telescope.nvim Diagnostics                              n
+
   <leader>sg        telescope.nvim Grep (root dir)                          n
 
   <leader>sG        telescope.nvim Grep (cwd)                               n
@@ -677,8 +678,6 @@ Plugins ~
 
   <leader>so        telescope.nvim Options                                  n
 
-  <leader>st        telescope.nvim Telescope                                n
-
   <leader>sw        telescope.nvim Word (root dir)                          n
 
   <leader>sW        telescope.nvim Word (cwd)                               n
@@ -691,11 +690,11 @@ Plugins ~
 
   [t                todo-comments.nvim Previous todo comment                n
 
-  <leader>xt        todo-comments.nvim Todo Trouble                         n
+  <leader>xt        todo-comments.nvim Todo (Trouble)                       n
 
-  <leader>xtt       todo-comments.nvim Todo Trouble                         n
+  <leader>xT        todo-comments.nvim Todo/Fix/Fixme (Trouble)             n
 
-  <leader>xT        todo-comments.nvim Todo Telescope                       n
+  <leader>st        todo-comments.nvim Todo                                 n
 
   <leader>xx        trouble.nvim Document Diagnostics (Trouble)             n
 
