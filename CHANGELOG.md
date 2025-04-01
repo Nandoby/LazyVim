@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.4.0-alpha](https://github.com/Nandoby/LazyVim/compare/v0.3.0-alpha...v0.4.0-alpha) (2025-04-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* **buffer:** remove `<leader>b]` in favor of `]b` and `[b`
+* **treesitter:** use `<bs>` in visual mode to shrink delection
+
+### Features
+
+* **buffer:** remove `&lt;leader&gt;b]` in favor of `]b` and `[b` ([a6c88a2](https://github.com/Nandoby/LazyVim/commit/a6c88a21e5e15bfd8e67e1574fc8f2197dbe8d2e))
+* **keymaps:** added `[b` and `]b` to switch buffers ([b882d52](https://github.com/Nandoby/LazyVim/commit/b882d52caa475a07d2dd61d3bf86756ae7e0e450))
+* **lsp:** ignore lsp servers where setting is set to `false` ([b34cb14](https://github.com/Nandoby/LazyVim/commit/b34cb1440de01c6621509a60a680218fbffccbda))
+
+
+### Bug Fixes
+
+* **lsp:** there is no declaration in telescope, use vim.lsp ([6b9d426](https://github.com/Nandoby/LazyVim/commit/6b9d426747b134064e9cbf6d1261226d90aa516d))
+
+
+### Code Refactoring
+
+* **treesitter:** use `&lt;bs&gt;` in visual mode to shrink delection ([40183fc](https://github.com/Nandoby/LazyVim/commit/40183fc0f7dc9a660d03e87bab9102e3a8a4b8a8))
+
 ## [0.3.0-alpha](https://github.com/Nandoby/LazyVim/compare/v0.2.2-alpha...v0.3.0-alpha) (2025-03-30)
 
 
