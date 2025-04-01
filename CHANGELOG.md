@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.0](https://github.com/Nandoby/LazyVim/compare/v0.4.0-alpha...v1.0.0) (2025-04-01)
+
+
+### Features
+
+* 1.0.0 release ([2a154d4](https://github.com/Nandoby/LazyVim/commit/2a154d4aa4d842618a5ea26ce2356e6e6ce2b8ec))
+
 ## [0.4.0-alpha](https://github.com/Nandoby/LazyVim/compare/v0.3.0-alpha...v0.4.0-alpha) (2025-04-01)
 
 
