@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.1.0](https://github.com/Nandoby/LazyVim/compare/v1.0.0...v1.1.0) (2025-04-02)
+
+
+### Features
+
+* install latest stable release of lazy.nvim and LazyVim ([9cf366d](https://github.com/Nandoby/LazyVim/commit/9cf366d90ab2b71346d6cef1c2cae1d3867fab85))
+* **lsp:** make it easier to customize LSP keymaps ([c4dd360](https://github.com/Nandoby/LazyVim/commit/c4dd36006fcc30616b0314ed43edca9dc08cda64))
+* **lsp:** setup lsp servers not supported by mason-lspconfig and added mason=false to skip server setup by mason ([af5682f](https://github.com/Nandoby/LazyVim/commit/af5682f4c9d9d0edc144f24ae7d949fc34708ca0))
+
+
+### Bug Fixes
+
+* **core:** use lazy.nvim version configured by the user ([228b442](https://github.com/Nandoby/LazyVim/commit/228b442008365b552a3b8f346fc593569badbc87))
+* **indent-blankline:** load on BufReadPost to prevent neo-tree errors ([39f47f9](https://github.com/Nandoby/LazyVim/commit/39f47f9f196d000dea0e11db7e140b79e1fc0b80))
+* **keymaps:** switch `&lt;leader&gt;gg` and `<leader>gG` to be consistent with the other keymaps ([8116c27](https://github.com/Nandoby/LazyVim/commit/8116c27e07ec9891728c8c1ac0d38642b0d2f30f))
+* **treesitter:** dont add to ensure_installed when "all" ([3f81439](https://github.com/Nandoby/LazyVim/commit/3f81439b839d630406b43ad31a12f6da1069fa34))
+
 ## [1.0.0](https://github.com/Nandoby/LazyVim/compare/v0.4.0-alpha...v1.0.0) (2025-04-01)
 
 
