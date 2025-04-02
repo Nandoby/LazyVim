@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Nandoby/LazyVim/compare/v1.1.0...v1.2.0) (2025-04-02)
+
+
+### Features
+
+* **extras:** added extra for mini.animate. Highly recommended! ([df2d279](https://github.com/Nandoby/LazyVim/commit/df2d279539604cbf56ad5da7401ad1e0ea367772))
+
 ## [1.1.0](https://github.com/Nandoby/LazyVim/compare/v1.0.0...v1.1.0) (2025-04-02)
 
 
