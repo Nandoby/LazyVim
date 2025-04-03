@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.3.2](https://github.com/Nandoby/LazyVim/compare/v1.3.1...v1.3.2) (2025-04-03)
+
+
+### Bug Fixes
+
+* **bufferline:** plugin was renamed from nvim-bufferline.lua -&gt; bufferline.nvim ([726e00f](https://github.com/Nandoby/LazyVim/commit/726e00feac60877c2645ff57c36b3d5bc83689c2))
+* **config:** don't set options to their defaults ([93200fe](https://github.com/Nandoby/LazyVim/commit/93200fe67827f77c29e0b8ce904ecba5db5fc2f6))
+* **config:** return defaults when setup was not run yet ([24d0cd3](https://github.com/Nandoby/LazyVim/commit/24d0cd3515c3bc539b2db36d2ec9e1dad33f7009))
+* **illuminate:** delete `]]` and `[[` keymaps set by ftplugins ([8ce2264](https://github.com/Nandoby/LazyVim/commit/8ce22648604c7cca546e0edd30445fecb41735f4))
+
 ## [1.3.1](https://github.com/Nandoby/LazyVim/compare/v1.3.0...v1.3.1) (2025-04-03)
 
 
