@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.1](https://github.com/Nandoby/LazyVim/compare/v1.3.0...v1.3.1) (2025-04-03)
+
+
+### Bug Fixes
+
+* **lsp:** again ([34da8ba](https://github.com/Nandoby/LazyVim/commit/34da8baac7b76b8e744d80b1e5d1eff2864dacca))
+* **lsp:** check for nvim-cmp instead of cmp ([0d83155](https://github.com/Nandoby/LazyVim/commit/0d83155f4cc59e3c136594745cb114a9f5fef0e9))
+
 ## [1.3.0](https://github.com/Nandoby/LazyVim/compare/v1.2.0...v1.3.0) (2025-04-03)
 
 
