@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.3.0](https://github.com/Nandoby/LazyVim/compare/v1.2.0...v1.3.0) (2025-04-03)
+
+
+### Features
+
+* added deactivate for neo-tree and noice ([5f1411f](https://github.com/Nandoby/LazyVim/commit/5f1411fba91f644ccbe4bd11ad18bc4ed5c24574))
+* **health:** added some simple health checks ([9a18aea](https://github.com/Nandoby/LazyVim/commit/9a18aea54fba08512684d80faeeb0ef4ba8ae4c9))
+* **keymaps:** do not create keymaps when a lazy keys handler exists ([355ea64](https://github.com/Nandoby/LazyVim/commit/355ea645448388504a47a7e56bac34efc64798d2))
+
+
+### Bug Fixes
+
+* **lsp:** `]w` now work as expected ([2a7bbb4](https://github.com/Nandoby/LazyVim/commit/2a7bbb4c286bf860fdf6938736658565f360e9d3))
+* **lsp:** only load cmp-nvim-lsp when cmp is enabled ([9458521](https://github.com/Nandoby/LazyVim/commit/945852112730f3edbae1d23ab039946681c1f3b0))
+* **options:** don't set GUI font. Fixes ([13563ef](https://github.com/Nandoby/LazyVim/commit/13563efe82fabf127786b27fa99184d0f59eee98))
+* **telescope:** bind hidden/ignore to `&lt;a-i&gt;`, `<a-h>` instead of `<c-i>` since thats the same as `<tab>`. ([8052dd7](https://github.com/Nandoby/LazyVim/commit/8052dd73c43bfb21361737bdd001bf98dc43f3b1))
+
 ## [1.2.0](https://github.com/Nandoby/LazyVim/compare/v1.1.0...v1.2.0) (2025-04-02)
 
 
