@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.4](https://github.com/Nandoby/LazyVim/compare/v1.3.3...v1.3.4) (2025-04-04)
+
+
+### Bug Fixes
+
+* **mini.ai:** load ai on VeryLazy. Keymaps interfer with which-key ([9a0f3f3](https://github.com/Nandoby/LazyVim/commit/9a0f3f30bee8663bfdd06a9d0460488881878797))
+* **noice:** scroll doc window in normal, insert and select mode ([c58d477](https://github.com/Nandoby/LazyVim/commit/c58d477d3b8c23c7ecfdd91afb4314578ba661fc))
+* **nvim-navic:** use kinds icons for navic ([ba5e62b](https://github.com/Nandoby/LazyVim/commit/ba5e62b6da427e7f16b37ae9b18fef3425d9b00a))
+
 ## [1.3.3](https://github.com/Nandoby/LazyVim/compare/v1.3.2...v1.3.3) (2025-04-04)
 
 
