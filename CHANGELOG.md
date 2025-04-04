@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.3](https://github.com/Nandoby/LazyVim/compare/v1.3.2...v1.3.3) (2025-04-04)
+
+
+### Bug Fixes
+
+* **lualine:** fixed neo-tree extension ([2b75bfb](https://github.com/Nandoby/LazyVim/commit/2b75bfbc3770e8cb7235c28688122e1faa7c57cc))
+* **neo-tree:** disable the `&lt;space&gt;` mapping (you can use `<cr>` instead), to make sure `<leader>` mappings still work ([1c8f528](https://github.com/Nandoby/LazyVim/commit/1c8f5285779b8dea85c12e4970c04942209d6343))
+* **neo-tree:** dont change cwd when opening neo-tree ([2735b65](https://github.com/Nandoby/LazyVim/commit/2735b6545f2f8a85f3a0fc3477bb6ac94f531bf1))
+
 ## [1.3.2](https://github.com/Nandoby/LazyVim/compare/v1.3.1...v1.3.2) (2025-04-03)
 
 
