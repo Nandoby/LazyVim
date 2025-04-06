@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.7.0](https://github.com/Nandoby/LazyVim/compare/v1.6.0...v1.7.0) (2025-04-06)
+
+
+### Features
+
+* **bufferline:** added keymaps to pin and delete non-pinned buffers. ([6ab9cc3](https://github.com/Nandoby/LazyVim/commit/6ab9cc3926cd1ac4bcd68fae8af82811cc9768d9))
+
+
+### Bug Fixes
+
+* **lsp:** dont use expr=true for lsp rename. ([ea1d811](https://github.com/Nandoby/LazyVim/commit/ea1d811a8ccceefcbf2bfd9d66decf2ecdca22a9))
+
 ## [1.6.0](https://github.com/Nandoby/LazyVim/compare/v1.5.0...v1.6.0) (2025-04-06)
 
 
