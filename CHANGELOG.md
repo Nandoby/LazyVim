@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/Nandoby/LazyVim/compare/v1.5.0...v1.6.0) (2025-04-06)
+
+
+### Features
+
+* **lsp:** allow disabling autoformat for certain buffers ([99e6608](https://github.com/Nandoby/LazyVim/commit/99e6608b9af4101d06a6c8269ffe22d8116156f2))
+
 ## [1.5.0](https://github.com/Nandoby/LazyVim/compare/v1.4.0...v1.5.0) (2025-04-06)
 
 
