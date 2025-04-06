@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.5.0](https://github.com/Nandoby/LazyVim/compare/v1.4.0...v1.5.0) (2025-04-06)
+
+
+### Features
+
+* **autocmds:** add groups to autocmds ([b5d11a3](https://github.com/Nandoby/LazyVim/commit/b5d11a3516d7c09aa3f42bad4fed7598376df758))
+* **trouble:** keymaps for trouble quicklist / loclist ([21bcd91](https://github.com/Nandoby/LazyVim/commit/21bcd911306b18c02004a1be43cc7a9f26d0a77e))
+
+
+### Bug Fixes
+
+* **plugins:** lazy-loading on BufReadPre or BufReadPost, should also use BufNewFile ([da2d466](https://github.com/Nandoby/LazyVim/commit/da2d466b36835eb9d31abda4c5f6c270e863cb9c))
+
 ## [1.4.0](https://github.com/Nandoby/LazyVim/compare/v1.3.4...v1.4.0) (2025-04-06)
 
 
