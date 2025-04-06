@@ -108,6 +108,12 @@ docker run -w /root -it --rm alpine:edge sh -uelic '
 
 </details>
 
+There's also a great video created by [@elijahmanor](https://github.com/elijahmanor) with a walkthrough to get started.
+
+[![Watch the video](https://img.youtube.com/vi/N93cTbtLCIM/hqdefault.jpg)](https://www.youtube.com/watch?v=N93cTbtLCIM)
+
+---
+
 ## 📂 File Structure
 
 The files under config will be automatically loaded at the appropriate time,
