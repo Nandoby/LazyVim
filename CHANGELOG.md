@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.0](https://github.com/Nandoby/LazyVim/compare/v1.7.2...v1.8.0) (2025-04-06)
+
+
+### Features
+
+* **mini.ai:** added all mini.ai text-objects to which-key ([1c2d720](https://github.com/Nandoby/LazyVim/commit/1c2d720a90b386629d4bf52beff1660b54d74f74))
+* **telescope:** improved Telescope mappings in normal and insert mode ([15e1ad5](https://github.com/Nandoby/LazyVim/commit/15e1ad5597b7336c91cae09af6a36106dbfd10e9))
+
 ## [1.7.2](https://github.com/Nandoby/LazyVim/compare/v1.7.1...v1.7.2) (2025-04-06)
 
 
