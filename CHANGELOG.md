@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/Nandoby/LazyVim/compare/v1.8.0...v1.9.0) (2025-04-06)
+
+
+### Features
+
+* **config:** allow to disable loading of the default keymaps/autocmds/options. ([51ff0ee](https://github.com/Nandoby/LazyVim/commit/51ff0ee19b8413088ff614b03977e1b6f0ac30d0))
+
 ## [1.8.0](https://github.com/Nandoby/LazyVim/compare/v1.7.2...v1.8.0) (2025-04-06)
 
 
