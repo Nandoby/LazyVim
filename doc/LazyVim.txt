@@ -95,12 +95,12 @@ Install the LazyVim Starter ~
     <
     Refer to the comments in the files on how to customize **LazyVim**.
 
-There’s also a great video created by @elijahmanor
+------------------------------------------------------------------------------
+There’s a great video created by @elijahmanor
 <https://github.com/elijahmanor> with a walkthrough to get started.
 
 <https://www.youtube.com/watch?v=N93cTbtLCIM>
 
-------------------------------------------------------------------------------
 
 FILE STRUCTURE                                        *LazyVim-file-structure*
 
