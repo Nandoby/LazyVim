@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/Nandoby/LazyVim/compare/v1.7.0...v1.7.1) (2025-04-06)
+
+
+### Bug Fixes
+
+* **lsp:** remove debug ([3cd44cc](https://github.com/Nandoby/LazyVim/commit/3cd44cc949aed5550ce636404859eca5267f5b49))
+
 ## [1.7.0](https://github.com/Nandoby/LazyVim/compare/v1.6.0...v1.7.0) (2025-04-06)
 
 
