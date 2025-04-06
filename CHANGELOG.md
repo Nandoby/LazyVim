@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.2](https://github.com/Nandoby/LazyVim/compare/v1.7.1...v1.7.2) (2025-04-06)
+
+
+### Bug Fixes
+
+* **leap:** don't use the x and X mappings in visual mode ([3bce81f](https://github.com/Nandoby/LazyVim/commit/3bce81fc566ef3c3b369a9bd85e0051c544047a3))
+
 ## [1.7.1](https://github.com/Nandoby/LazyVim/compare/v1.7.0...v1.7.1) (2025-04-06)
 
 
