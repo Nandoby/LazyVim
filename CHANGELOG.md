@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.4.0](https://github.com/Nandoby/LazyVim/compare/v1.3.4...v1.4.0) (2025-04-06)
+
+
+### Features
+
+* **icons:** add copilot icon ([6e3298f](https://github.com/Nandoby/LazyVim/commit/6e3298f3889309d3cc02a3cda34159a2142f733e))
+
+
+### Bug Fixes
+
+* **keymaps:** move lines with silent and without triggering cmdline ([8371c5c](https://github.com/Nandoby/LazyVim/commit/8371c5c90d77b70e5a8b816f4e6ca09b4ec4d956))
+* **keymaps:** silent by default ([05f67d5](https://github.com/Nandoby/LazyVim/commit/05f67d54302edf7347c79233e149a838092596b0))
+* **lsp:** properly merge lsp client capabilities ([b6ded22](https://github.com/Nandoby/LazyVim/commit/b6ded22729aed0bd1dd2649cee4361827f51a7a1))
+* **mini.indent:** no need to disable indent in alpha dashboard config ([147f453](https://github.com/Nandoby/LazyVim/commit/147f45309b671533900fa73db842345600880c52))
+* **mini.surround:** use merged plugin spec to build keys. ([8eaac12](https://github.com/Nandoby/LazyVim/commit/8eaac12bdb1da78d5d940686731241f03d20e8e6))
+* **typescript:** typescript extras Keymaps ([01a18bd](https://github.com/Nandoby/LazyVim/commit/01a18bda04d7260b613b38c67a12d8ece0a08d24))
+
 ## [1.3.4](https://github.com/Nandoby/LazyVim/compare/v1.3.3...v1.3.4) (2025-04-04)
 
 
