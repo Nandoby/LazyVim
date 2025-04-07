@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.1](https://github.com/Nandoby/LazyVim/compare/v1.10.0...v1.10.1) (2025-04-07)
+
+
+### Bug Fixes
+
+* **health:** also check for fdfind instead of just fd ([d6080b9](https://github.com/Nandoby/LazyVim/commit/d6080b94467b317cff72a0bb77954c5f309ae0ef))
+
 ## [1.10.0](https://github.com/Nandoby/LazyVim/compare/v1.9.2...v1.10.0) (2025-04-07)
 
 
