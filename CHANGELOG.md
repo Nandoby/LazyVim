@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.11.0](https://github.com/Nandoby/LazyVim/compare/v1.10.1...v1.11.0) (2025-04-07)
+
+
+### Features
+
+* **lsp:** lazy-load leap/flit and added keymaps ([911b19f](https://github.com/Nandoby/LazyVim/commit/911b19ffd8b590be530e190008bdbaaf7c288005))
+
+
+### Bug Fixes
+
+* **treesitter-textobjects:** only disable the textobjects plugins/* files when its not enabled in the treesitter opts ([4c59a08](https://github.com/Nandoby/LazyVim/commit/4c59a08f0fa7d0b5722ca579aeff68732ff8503b))
+
 ## [1.10.1](https://github.com/Nandoby/LazyVim/compare/v1.10.0...v1.10.1) (2025-04-07)
 
 
