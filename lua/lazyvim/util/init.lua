@@ -20,6 +20,16 @@ function M.has(plugin)
   return require("lazy.core.config").plugins[plugin] ~= nil
 end
 
+---@param fn fun()
+function M.on_very_lazy(fn)
+  vim.api.nvim_create_autocmd("User", {
+    pattern = "VeryLazy",
+    callback = function()
+      fn()
+    end,
+  })
+end
+
 ---@param name string
 function M.opts(name)
   local plugin = require("lazy.core.config").plugins[name]
@@ -45,9 +55,12 @@ function M.get_root()
   if path then
     for _, client in pairs(vim.lsp.get_active_clients({ bufnr = 0 })) do
       local workspace = client.config.workspace_folders
-      local paths = workspace and vim.tbl_map(function (ws)
-        return vim.uri_to_fname(ws.uri)
-      end, workspace) or client.config.root_dir and { client.config.root_dir } or {}
+      local paths = workspace
+          and vim.tbl_map(function(ws)
+            return vim.uri_to_fname(ws.uri)
+          end, workspace)
+        or client.config.root_dir and { client.config.root_dir }
+        or {}
       for _, p in ipairs(paths) do
         local r = vim.loop.fs_realpath(p)
         if path:find(r, 1, true) then
@@ -56,8 +69,8 @@ function M.get_root()
       end
     end
   end
-  table.sort(roots, function (a, b)
-    return #a > #b 
+  table.sort(roots, function(a, b)
+    return #a > #b
   end)
   ---@type string?
   local root = roots[1]
@@ -76,7 +89,7 @@ end
 -- for `files`, git_files or find_files will be chosen depending on .git
 function M.telescope(builtin, opts)
   local params = { builtin = builtin, opts = opts }
-  return function ()
+  return function()
     builtin = params.builtin
     opts = params.opts
     opts = vim.tbl_deep_extend("force", { cwd = M.get_root() }, opts or {})
