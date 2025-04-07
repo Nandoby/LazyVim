@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.10.0](https://github.com/Nandoby/LazyVim/compare/v1.9.2...v1.10.0) (2025-04-07)
+
+
+### Features
+
+* **util:** added `Util.on_very_lazy` ([bbb1b9b](https://github.com/Nandoby/LazyVim/commit/bbb1b9b77a1921cc55b169500bee97f22c593b83))
+
+
+### Bug Fixes
+
+* **notify:** install notify when noice is not enabled ([734b605](https://github.com/Nandoby/LazyVim/commit/734b6059b89552acb184989088b3de4c20fd1cbf))
+* **which-key:** only add noice group when noice is enabled ([6da342e](https://github.com/Nandoby/LazyVim/commit/6da342eac25858912edf720af09d6800d2139b68))
+
 ## [1.9.2](https://github.com/Nandoby/LazyVim/compare/v1.9.1...v1.9.2) (2025-04-07)
 
 
