@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.12.0](https://github.com/Nandoby/LazyVim/compare/v1.11.0...v1.12.0) (2025-04-07)
+
+
+### Features
+
+* **telescope:** add `&lt;leader&gt;sR` for `:Telescope resume` ([39f5ea9](https://github.com/Nandoby/LazyVim/commit/39f5ea923fb34d31a36badadd7e63a47a8a7a221))
+
+
+### Bug Fixes
+
+* **lualine:** Add a space separator between progress & location in lualine ([edd178c](https://github.com/Nandoby/LazyVim/commit/edd178c0b3ebf84b485a94703856d5f98f8a18e9))
+
 ## [1.11.0](https://github.com/Nandoby/LazyVim/compare/v1.10.1...v1.11.0) (2025-04-07)
 
 
