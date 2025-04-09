@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.15.1](https://github.com/Nandoby/LazyVim/compare/v1.15.0...v1.15.1) (2025-04-09)
+
+
+### Bug Fixes
+
+* **alpha:** larger session icon. ([4b9487d](https://github.com/Nandoby/LazyVim/commit/4b9487d4268f6a0f165dee6c1a4ab5b3b6edb1a1))
+* **luasnip:** dont build jsregexp on Windows ([1ff536b](https://github.com/Nandoby/LazyVim/commit/1ff536baee29bf1437a8683619743392119d7c11))
+
 ## [1.15.0](https://github.com/Nandoby/LazyVim/compare/v1.14.1...v1.15.0) (2025-04-09)
 
 
