@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.14.0](https://github.com/Nandoby/LazyVim/compare/v1.13.1...v1.14.0) (2025-04-09)
+
+
+### Features
+
+* **keymaps:** Add previous/next trouble/quickfix item keymap [q, ]q ([6d7061a](https://github.com/Nandoby/LazyVim/commit/6d7061a192256786fbf5d59081cb9db0d201c3f4))
+
+
+### Bug Fixes
+
+* **git-signs:** larger icons for delete ([9512081](https://github.com/Nandoby/LazyVim/commit/95120814dffa9e77b05cfba09665429855fe1b8d))
+* **icons:** replace obsolete Nerd icons ([b586329](https://github.com/Nandoby/LazyVim/commit/b5863291513570874c86d919b37a840c26ce0b0e))
+* **lsp:** only map lsp goto definition when client has definitionProvider ([28c6719](https://github.com/Nandoby/LazyVim/commit/28c6719798a5e6f3dfdafc4022f121dd3f7b8ffa))
+* **luasnips:** make install_jsregexp ([78dccaf](https://github.com/Nandoby/LazyVim/commit/78dccaf56b787e0d1f1b965fb22481d4b44a30cc))
+* **mini-indentscope:** disable indentscope for filetypes during init ([d557851](https://github.com/Nandoby/LazyVim/commit/d5578517a6af22dbb061a4ba9e80564d51cad2ad))
+* **treesitter:** always install all built-in treesitter parsers to prevent query issues ([979fa34](https://github.com/Nandoby/LazyVim/commit/979fa346f839d31f2618e63623d4907c0bd38aca))
+
 ## [1.13.1](https://github.com/Nandoby/LazyVim/compare/v1.13.0...v1.13.1) (2025-04-09)
 
 
