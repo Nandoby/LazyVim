@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.1](https://github.com/Nandoby/LazyVim/compare/v1.14.0...v1.14.1) (2025-04-09)
+
+
+### Bug Fixes
+
+* **leap:** pin leap for now till flit issue is fixed ([00d3c26](https://github.com/Nandoby/LazyVim/commit/00d3c26ab373ad63a849f0fc5349a0fdad093e3e))
+
 ## [1.14.0](https://github.com/Nandoby/LazyVim/compare/v1.13.1...v1.14.0) (2025-04-09)
 
 
