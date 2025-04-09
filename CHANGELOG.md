@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.1](https://github.com/Nandoby/LazyVim/compare/v1.13.0...v1.13.1) (2025-04-09)
+
+
+### Bug Fixes
+
+* **treesitter:** nil check ([3683e8f](https://github.com/Nandoby/LazyVim/commit/3683e8f8beb9135d1e3c67a2722426ec25630497))
+
 ## [1.13.0](https://github.com/Nandoby/LazyVim/compare/v1.12.0...v1.13.0) (2025-04-09)
 
 
