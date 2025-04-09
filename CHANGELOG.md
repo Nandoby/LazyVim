@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.16.0](https://github.com/Nandoby/LazyVim/compare/v1.15.1...v1.16.0) (2025-04-09)
+
+
+### Features
+
+* **cmp:** added `&lt;s-CR&gt;` to confirm completion with replace ([f1dcbf1](https://github.com/Nandoby/LazyVim/commit/f1dcbf1d567b08d2c79d60464b349d9cced5dbea))
+* **copilot:** added an extra to enable copilot. {import = "lazyvim.plugins.extras.coding.copilot"} ([c196e4c](https://github.com/Nandoby/LazyVim/commit/c196e4ce1cba89670154ea9e7bfdc3a8fe77f901))
+
+
+### Bug Fixes
+
+* **luasnip:** added note that jsregexp is optional if it fails to build ([e563672](https://github.com/Nandoby/LazyVim/commit/e5636720de2757ff1b9a4ad789f2fc374b84fe4b))
+
 ## [1.15.1](https://github.com/Nandoby/LazyVim/compare/v1.15.0...v1.15.1) (2025-04-09)
 
 
