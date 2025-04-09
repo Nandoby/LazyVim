@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.1](https://github.com/Nandoby/LazyVim/compare/v1.18.0...v1.18.1) (2025-04-09)
+
+
+### Bug Fixes
+
+* **copilot:** confirm with replace for copilot only ([0482c80](https://github.com/Nandoby/LazyVim/commit/0482c80e44690b50476cd45c36d04ef4308e41ee))
+
 ## [1.18.0](https://github.com/Nandoby/LazyVim/compare/v1.17.0...v1.18.0) (2025-04-09)
 
 
