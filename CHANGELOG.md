@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.15.0](https://github.com/Nandoby/LazyVim/compare/v1.14.1...v1.15.0) (2025-04-09)
+
+
+### Features
+
+* **telescope:** Add open selected with trouble keymap ([634ce76](https://github.com/Nandoby/LazyVim/commit/634ce7658fb72d631fdea1b0f2b2e504a928a497))
+
+
+### Bug Fixes
+
+* **leap:** unpin leap ([c2b8dec](https://github.com/Nandoby/LazyVim/commit/c2b8dec448979eeec94730acda9b05b47e6cfa26))
+
 ## [1.14.1](https://github.com/Nandoby/LazyVim/compare/v1.14.0...v1.14.1) (2025-04-09)
 
 
