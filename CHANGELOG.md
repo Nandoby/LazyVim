@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.13.0](https://github.com/Nandoby/LazyVim/compare/v1.12.0...v1.13.0) (2025-04-09)
+
+
+### Features
+
+* persist pinned tabs ([cc977c2](https://github.com/Nandoby/LazyVim/commit/cc977c24ff7e5ae84e9346edfa9eb9f5d918f463))
+* **telescope:** add `&lt;leader&gt;sS` for `:Telescope lsp_workspace_symbols` ([50a7b0a](https://github.com/Nandoby/LazyVim/commit/50a7b0a4cdaaa2a891536ad35d27d2f6ffe0d599))
+
+
+### Bug Fixes
+
+* **illuminate:** always set reference keymaps on the buffer as well to properly overwrite ftplugin mappings. ([995d0b5](https://github.com/Nandoby/LazyVim/commit/995d0b5ca3936f034261a3c3555e778138f46e49))
+* **mini.surround:** don't create empty keymaps ([d639a9b](https://github.com/Nandoby/LazyVim/commit/d639a9b70527a8dc5a564bc16df1f15d2cf9f47d))
+* **treesitter:** disable indent only for python right now ([1062f67](https://github.com/Nandoby/LazyVim/commit/1062f677b2b1e91736511db29dca595520be8642))
+* **treesitter:** disable treesitter indent by default, since it has too many issues ([a35a7d8](https://github.com/Nandoby/LazyVim/commit/a35a7d8091bb5a6c421ede9989fac51a5d07e900))
+
 ## [1.12.0](https://github.com/Nandoby/LazyVim/compare/v1.11.0...v1.12.0) (2025-04-07)
 
 
