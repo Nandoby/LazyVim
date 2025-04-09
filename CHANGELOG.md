@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.18.0](https://github.com/Nandoby/LazyVim/compare/v1.17.0...v1.18.0) (2025-04-09)
+
+
+### Features
+
+* add luap to nvim-treesitter ensure_installed ([43861e7](https://github.com/Nandoby/LazyVim/commit/43861e7ca82ae7ec9a898a2f6b16a13a47e2737e))
+* **autocmds:** added 'query' to close_with_q autocmd ([9f1eece](https://github.com/Nandoby/LazyVim/commit/9f1eece363d172ff9387def9f3ba9e8916beb75d))
+
+
+### Bug Fixes
+
+* **mason:** removed installing of shellcheck and shfmt. Use bashls instead ([e39f1a1](https://github.com/Nandoby/LazyVim/commit/e39f1a184c2b594a47777bc3dc69277d6381e3f4))
+* rename more appropriately (also a typo) ([5c69d55](https://github.com/Nandoby/LazyVim/commit/5c69d55ffa6f80c4f90958a3c46e8b0c05f414e4))
+* **typescript:** enable function call completion snippets ([af27711](https://github.com/Nandoby/LazyVim/commit/af27711e39b5d3261e58d64e0d4d679358542184))
+
 ## [1.17.0](https://github.com/Nandoby/LazyVim/compare/v1.16.0...v1.17.0) (2025-04-09)
 
 
