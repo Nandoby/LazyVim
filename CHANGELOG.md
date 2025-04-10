@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.1](https://github.com/Nandoby/LazyVim/compare/v1.19.0...v1.19.1) (2025-04-10)
+
+
+### Bug Fixes
+
+* **prettier:** extend ensure_installed instead of overwriting it ([afa3629](https://github.com/Nandoby/LazyVim/commit/afa3629c7aa69458262d872a4bc10dd0cad72cce))
+
 ## [1.19.0](https://github.com/Nandoby/LazyVim/compare/v1.18.1...v1.19.0) (2025-04-10)
 
 
