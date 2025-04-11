@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.2](https://github.com/Nandoby/LazyVim/compare/v1.22.1...v1.22.2) (2025-04-11)
+
+
+### Bug Fixes
+
+* **alpha:** use `AlphaFooter` highlight for footer section ([51b237b](https://github.com/Nandoby/LazyVim/commit/51b237b453c120f33d1e923145c5ae9c454fa206))
+
 ## [1.22.1](https://github.com/Nandoby/LazyVim/compare/v1.22.0...v1.22.1) (2025-04-11)
 
 
