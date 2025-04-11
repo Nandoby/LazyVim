@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.0](https://github.com/Nandoby/LazyVim/compare/v1.21.0...v1.22.0) (2025-04-11)
+
+
+### Features
+
+* **lsp:** added keymap to see source actions with `&lt;leader&gt;cA` (useful for tsserver and others) ([aff93fe](https://github.com/Nandoby/LazyVim/commit/aff93fe46f0ca81b094a43f02da6eacb504667df))
+
 ## [1.21.0](https://github.com/Nandoby/LazyVim/compare/v1.20.0...v1.21.0) (2025-04-11)
 
 
