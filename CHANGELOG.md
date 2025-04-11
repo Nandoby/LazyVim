@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.24.0](https://github.com/Nandoby/LazyVim/compare/v1.23.0...v1.24.0) (2025-04-11)
+
+
+### Features
+
+* **treesitter:** use Python indents as they've improved greatly ([9c51d54](https://github.com/Nandoby/LazyVim/commit/9c51d54b1c4d05a5d292dd4ebfa07c25b21a44bc))
+
 ## [1.23.0](https://github.com/Nandoby/LazyVim/compare/v1.22.2...v1.23.0) (2025-04-11)
 
 
