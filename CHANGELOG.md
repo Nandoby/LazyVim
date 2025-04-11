@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.23.0](https://github.com/Nandoby/LazyVim/compare/v1.22.2...v1.23.0) (2025-04-11)
+
+
+### Features
+
+* **mason:** compatibility with the new mason registry ([9ab8fd8](https://github.com/Nandoby/LazyVim/commit/9ab8fd8705e723f2475ed841bc03199e478a2629))
+* **treesitter:** add luadoc ([c44ae19](https://github.com/Nandoby/LazyVim/commit/c44ae19010a003393848a4fea87d80028c9838c9))
+
+
+### Bug Fixes
+
+* **autocmds:** remove query from q-to-quit autocmd ([a1aff7f](https://github.com/Nandoby/LazyVim/commit/a1aff7faec05be510df12aea31077e3649ca0bb7))
+* **mason:** removed flake8. You can add it back in your own configs if you need it or add ruff_lsp ([1056ec7](https://github.com/Nandoby/LazyVim/commit/1056ec77a4c37e87ce3570be3638521cf473069a))
+
 ## [1.22.2](https://github.com/Nandoby/LazyVim/compare/v1.22.1...v1.22.2) (2025-04-11)
 
 
