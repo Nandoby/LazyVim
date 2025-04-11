@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.21.0](https://github.com/Nandoby/LazyVim/compare/v1.20.0...v1.21.0) (2025-04-11)
+
+
+### Features
+
+* **lsp:** make lsp work when mason-lspconfig is disabled. Fixed ([8b1cb6a](https://github.com/Nandoby/LazyVim/commit/8b1cb6a858cdcc5f104dc828bc333d309f71b98c))
+
+
+### Bug Fixes
+
+* **icons:** replace obsolete icons ([2ca34f7](https://github.com/Nandoby/LazyVim/commit/2ca34f7b93798a37bb16196522395943abacd560))
+
 ## [1.20.0](https://github.com/Nandoby/LazyVim/compare/v1.19.2...v1.20.0) (2025-04-11)
 
 
