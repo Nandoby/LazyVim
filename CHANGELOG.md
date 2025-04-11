@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.1](https://github.com/Nandoby/LazyVim/compare/v1.22.0...v1.22.1) (2025-04-11)
+
+
+### Bug Fixes
+
+* **config:** compat with lazy.nvim ([52749c6](https://github.com/Nandoby/LazyVim/commit/52749c60141ef1c918d70aaca7d3433892ee998e))
+
 ## [1.22.0](https://github.com/Nandoby/LazyVim/compare/v1.21.0...v1.22.0) (2025-04-11)
 
 
