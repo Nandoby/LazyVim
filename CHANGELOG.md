@@ -1,5 +1,33 @@
 # Changelog
 
+## [2.0.0](https://github.com/Nandoby/LazyVim/compare/v1.25.0...v2.0.0) (2025-04-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* **treesitter:** rename help to vimdoc
+
+### Features
+
+* **autocmds:** add checkhealth filetype to close_with_q list ([baba499](https://github.com/Nandoby/LazyVim/commit/baba4996ba62428a6acf299772f6c2f487c54a77))
+* **keymaps:** Get rename command from inc_rename configuration ([e501cef](https://github.com/Nandoby/LazyVim/commit/e501cefa71b8c22b836e9633139f8e7c451d958d))
+* **telescope:** add document/workspace diagnostics and todo/fixme telescope keymaps ([b5d29c4](https://github.com/Nandoby/LazyVim/commit/b5d29c4647f20ad26a2c999f6706ceac4ee4925a))
+* **telescope:** use the new dynamic workspace symbols ([c89b0b8](https://github.com/Nandoby/LazyVim/commit/c89b0b8a1721eaa46f63bc5b3d645454c44fd4e0))
+
+
+### Bug Fixes
+
+* **autocmds:** don't auto create dirs for urls. ([9bc95e8](https://github.com/Nandoby/LazyVim/commit/9bc95e8befe6d1f5261c8c42d739fe5f0ad94cbf))
+* **config:** options cant be disabled with lazyvim config ([996e68c](https://github.com/Nandoby/LazyVim/commit/996e68c767eb770747935adc1d7902d068cff813))
+* **format:** ignore vim.b.autoformat when formatting using key bindings ([cb2d4cc](https://github.com/Nandoby/LazyVim/commit/cb2d4cc7a61cf72f664f62fd04d2f9d71ade6013))
+* **lazygit:** dont use `&lt;esc&gt;<esc>` for normal more for lazygit to prevent delays on `<esc>`. ([1354782](https://github.com/Nandoby/LazyVim/commit/1354782c95483eab5181b512a2b8ecb99ae5eb1d))
+* **lsp:** gt -&gt; gT ([e8485d1](https://github.com/Nandoby/LazyVim/commit/e8485d14008b952d7bfa960d29f6ab838cf89393))
+
+
+### Code Refactoring
+
+* **treesitter:** rename help to vimdoc ([2f55a98](https://github.com/Nandoby/LazyVim/commit/2f55a98f792886ebad4a256dd99ad4810c7590d0))
+
 ## [1.25.0](https://github.com/Nandoby/LazyVim/compare/v1.24.0...v1.25.0) (2025-04-12)
 
 
