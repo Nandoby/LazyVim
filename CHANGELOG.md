@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.25.0](https://github.com/Nandoby/LazyVim/compare/v1.24.0...v1.25.0) (2025-04-12)
+
+
+### Features
+
+* **autocmds:** add auto create dir ([27de6db](https://github.com/Nandoby/LazyVim/commit/27de6dbd3f0b74bb24f6eab56f02fe8000483408))
+* **lualine:** added lazy extension ([2b2e29d](https://github.com/Nandoby/LazyVim/commit/2b2e29d3cb8c86b7b712eb648e2f8b7c48532e7e))
+
 ## [1.24.0](https://github.com/Nandoby/LazyVim/compare/v1.23.0...v1.24.0) (2025-04-11)
 
 
