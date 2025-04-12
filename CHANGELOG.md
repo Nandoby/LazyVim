@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.1.0](https://github.com/Nandoby/LazyVim/compare/v2.0.0...v2.1.0) (2025-04-12)
+
+
+### Features
+
+* added extra for dap ([81f77fe](https://github.com/Nandoby/LazyVim/commit/81f77fe7ad7512d65d2f989d1f1e0486ca5c2f9d))
+* **dap:** added extra for dap nlua ([5ecd674](https://github.com/Nandoby/LazyVim/commit/5ecd6748fd36b1eb31ddd40e60a381a676a30115))
+* **which-key:** easier integration for which-key group names ([e81a906](https://github.com/Nandoby/LazyVim/commit/e81a906aa283e854e9a3f0c9387f49f99116a43d))
+
+
+### Bug Fixes
+
+* **dap:** added DapInstall and DapUninstall to cmds ([d0bf69c](https://github.com/Nandoby/LazyVim/commit/d0bf69c473051c0b10cd64db867693dae9aab72d))
+
 ## [2.0.0](https://github.com/Nandoby/LazyVim/compare/v1.25.0...v2.0.0) (2025-04-12)
 
 
