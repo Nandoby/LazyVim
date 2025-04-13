@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.0](https://github.com/Nandoby/LazyVim/compare/v2.6.0...v2.7.0) (2025-04-13)
+
+
+### Features
+
+* **copilot:** added lualine component for copilot. Simple icon colored by status. Will add status message when avalaible (warnings) ([48eba19](https://github.com/Nandoby/LazyVim/commit/48eba19cf528d4008187d71fd5d70d070ea21eec))
+
 ## [2.6.0](https://github.com/Nandoby/LazyVim/compare/v2.5.0...v2.6.0) (2025-04-13)
 
 
