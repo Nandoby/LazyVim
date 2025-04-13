@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.1](https://github.com/Nandoby/LazyVim/compare/v2.4.0...v2.4.1) (2025-04-13)
+
+
+### Bug Fixes
+
+* **lsp:** properly check that diagnostics virtual_text is a table ([a8eae58](https://github.com/Nandoby/LazyVim/commit/a8eae58e98ca17bc8e76ff01583e7388ceb743e5))
+
 ## [2.4.0](https://github.com/Nandoby/LazyVim/compare/v2.3.0...v2.4.0) (2025-04-13)
 
 
