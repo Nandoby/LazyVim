@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.4.0](https://github.com/Nandoby/LazyVim/compare/v2.3.0...v2.4.0) (2025-04-13)
+
+
+### Features
+
+* **dap:** add more keybindings and lualine component ([9e122ee](https://github.com/Nandoby/LazyVim/commit/9e122eed5ce64d85ee9271ed9a5654009a0b55f5))
+* **diagnostics:** added support for setting prefix = "icons". Check the docs on how to enable ([f9bbae3](https://github.com/Nandoby/LazyVim/commit/f9bbae3be534a22192d74ecc7515ad7b8bda4e5b))
+* **diagnostics:** show diagnostics source when more than one source is reporting diagnostics ([8ec4736](https://github.com/Nandoby/LazyVim/commit/8ec47360fff60d0412cd259140e435047419aaf8))
+
 ## [2.3.0](https://github.com/Nandoby/LazyVim/compare/v2.2.1...v2.3.0) (2025-04-13)
 
 
