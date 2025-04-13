@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.2](https://github.com/Nandoby/LazyVim/compare/v2.4.1...v2.4.2) (2025-04-13)
+
+
+### Bug Fixes
+
+* **diagnostics:** deepcopy diagnostic params ([f71a75a](https://github.com/Nandoby/LazyVim/commit/f71a75a534dd2d07fc6b5a88c150e3ee345b6245))
+
 ## [2.4.1](https://github.com/Nandoby/LazyVim/compare/v2.4.0...v2.4.1) (2025-04-13)
 
 
