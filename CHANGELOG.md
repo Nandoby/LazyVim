@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.8.0](https://github.com/Nandoby/LazyVim/compare/v2.7.0...v2.8.0) (2025-04-13)
+
+
+### Features
+
+* **copilot:** better copilot status colors for lualine ([984157a](https://github.com/Nandoby/LazyVim/commit/984157ab7be4ead417d3a23066aa02ae1683a50a))
+
+
+### Bug Fixes
+
+* remove unintentional `&lt;lt&gt;nop>` mapping ([cbfd361](https://github.com/Nandoby/LazyVim/commit/cbfd361a0b707c43df69d8d7b6bb0f2d40d4da60))
+
 ## [2.7.0](https://github.com/Nandoby/LazyVim/compare/v2.6.0...v2.7.0) (2025-04-13)
 
 
