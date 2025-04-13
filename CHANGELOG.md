@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.6.0](https://github.com/Nandoby/LazyVim/compare/v2.5.0...v2.6.0) (2025-04-13)
+
+
+### Features
+
+* **extras:** added project management ([cf39194](https://github.com/Nandoby/LazyVim/commit/cf391945d6e1b2ffa382f3e464c34c9a00e32601))
+
+
+### Bug Fixes
+
+* **project:** load on VeryLazy otherwise projects wont be loaded when opening Telescope ([ed3ee08](https://github.com/Nandoby/LazyVim/commit/ed3ee0844eec5cdd2eea75bc86d00f6e010a632f))
+
 ## [2.5.0](https://github.com/Nandoby/LazyVim/compare/v2.4.3...v2.5.0) (2025-04-13)
 
 
