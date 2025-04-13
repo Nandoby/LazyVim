@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.3](https://github.com/Nandoby/LazyVim/compare/v2.4.2...v2.4.3) (2025-04-13)
+
+
+### Bug Fixes
+
+* **treesitter:** de-duplicate langs in ensure_installed. ([816f7c6](https://github.com/Nandoby/LazyVim/commit/816f7c62efb1e70b15433c313ad1c8ccc815e971))
+
 ## [2.4.2](https://github.com/Nandoby/LazyVim/compare/v2.4.1...v2.4.2) (2025-04-13)
 
 
