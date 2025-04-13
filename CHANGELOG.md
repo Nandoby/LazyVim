@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/Nandoby/LazyVim/compare/v2.4.3...v2.5.0) (2025-04-13)
+
+
+### Features
+
+* **lsp:** added support for setting global lsp client capabilities ([486a05d](https://github.com/Nandoby/LazyVim/commit/486a05d1fcdc7ebb99f0f2f1ef91dd00b52883ce))
+
 ## [2.4.3](https://github.com/Nandoby/LazyVim/compare/v2.4.2...v2.4.3) (2025-04-13)
 
 
