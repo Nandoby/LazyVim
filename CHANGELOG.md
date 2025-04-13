@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/Nandoby/LazyVim/compare/v2.2.1...v2.3.0) (2025-04-13)
+
+
+### Features
+
+* **dap:** add step out, rebind step over ([616f01d](https://github.com/Nandoby/LazyVim/commit/616f01da7ee29f010956c0013ed27aa9753ee432))
+
 ## [2.2.1](https://github.com/Nandoby/LazyVim/compare/v2.2.0...v2.2.1) (2025-04-13)
 
 
