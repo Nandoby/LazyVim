@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.10.0](https://github.com/Nandoby/LazyVim/compare/v2.9.0...v2.10.0) (2025-04-14)
+
+
+### Features
+
+* **neo-tree:** refresh neotree git status when closing a lazygit terminal ([cb4a2a5](https://github.com/Nandoby/LazyVim/commit/cb4a2a56b84806130fe44f476e4cf14e435444a4))
+
+
+### Bug Fixes
+
+* **copilot:** re-enable copilot confirm with overwrite ([c0f0c90](https://github.com/Nandoby/LazyVim/commit/c0f0c9083cdb3a423881a208d83a5ee05711f8c5))
+
 ## [2.9.0](https://github.com/Nandoby/LazyVim/compare/v2.8.0...v2.9.0) (2025-04-13)
 
 
