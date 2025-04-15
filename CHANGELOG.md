@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.1.0](https://github.com/Nandoby/LazyVim/compare/v3.0.0...v3.1.0) (2025-04-15)
+
+
+### Features
+
+* **noice:** send written notifications to the mini view instead of notify ([cc31761](https://github.com/Nandoby/LazyVim/commit/cc31761c6bcbd17c85734fdda31e46d7fa4be7f0))
+* **noice:** use noice's improved entry doc view for cmp ([4f800b0](https://github.com/Nandoby/LazyVim/commit/4f800b06d97678a80b70bb1bfcb6dd401518c435))
+
 ## [3.0.0](https://github.com/Nandoby/LazyVim/compare/v2.13.1...v3.0.0) (2025-04-15)
 
 
