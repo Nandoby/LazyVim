@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.2.0](https://github.com/Nandoby/LazyVim/compare/v3.1.0...v3.2.0) (2025-04-15)
+
+
+### Features
+
+* **noice:** enable the inc_rename preset when inc_rename is available ([072c6cb](https://github.com/Nandoby/LazyVim/commit/072c6cbdd2cafe3de424dc1bc1e185eb61e53d51))
+
+
+### Bug Fixes
+
+* **mini:** lazy now supports mini plugins out of the box. no longer needed to have a custom config ([6635944](https://github.com/Nandoby/LazyVim/commit/6635944c0afed3e7a7de50001f818db9f16c6136))
+
 ## [3.1.0](https://github.com/Nandoby/LazyVim/compare/v3.0.0...v3.1.0) (2025-04-15)
 
 
