@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.13.1](https://github.com/Nandoby/LazyVim/compare/v2.13.0...v2.13.1) (2025-04-15)
+
+
+### Bug Fixes
+
+* **copilot:** latest copilot-cmp requires passing opts to _on_insert_enter ([197e936](https://github.com/Nandoby/LazyVim/commit/197e936154670e100b8be7999ff1c847a52bff48))
+* **copilot:** removed special handling of copilot in cmp. no longer needed ([cedeb84](https://github.com/Nandoby/LazyVim/commit/cedeb84736808efab7f5010ccbc723efc603f2a3))
+* **icons:** updated a dap icon ([3831170](https://github.com/Nandoby/LazyVim/commit/38311705db554fad59cfb9f700bc70b52cfc521b))
+
+
+### Performance Improvements
+
+* **comment:** removed nvim-ts-context-commentstring, since mini.comment now handles that internally ([cab265c](https://github.com/Nandoby/LazyVim/commit/cab265cd60c4fd9ca472df555fc7cbd429a0e97b))
+
 ## [2.13.0](https://github.com/Nandoby/LazyVim/compare/v2.12.1...v2.13.0) (2025-04-14)
 
 
