@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.3.0](https://github.com/Nandoby/LazyVim/compare/v3.2.0...v3.3.0) (2025-04-15)
+
+
+### Features
+
+* **telescope:** added `&lt;a-c&gt;` mapping for telescope pickers to switch to cwd instead of root ([2f79276](https://github.com/Nandoby/LazyVim/commit/2f792769da97473abe2ff7e19e24d91b73df1185))
+
 ## [3.2.0](https://github.com/Nandoby/LazyVim/compare/v3.1.0...v3.2.0) (2025-04-15)
 
 
