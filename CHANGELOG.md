@@ -1,5 +1,24 @@
 # Changelog
 
+## [3.6.0](https://github.com/Nandoby/LazyVim/compare/v3.5.0...v3.6.0) (2025-04-16)
+
+
+### Features
+
+* **go:** add go lang extras ([6d855e5](https://github.com/Nandoby/LazyVim/commit/6d855e56d8fa7aab047238012636f7b886f3e3de))
+* **typescript:** added dap config for typescript. Will only be enabled when dap is also enabled ([5684617](https://github.com/Nandoby/LazyVim/commit/5684617ac08844154cdb8558380b7963567752eb))
+* **vscode:** add `vscode=true` to any plugin spec you want to activate in vscode ([deea316](https://github.com/Nandoby/LazyVim/commit/deea316e162d2c6b8850e5bcb530a9b1e368e756))
+* **vscode:** better vscode support ([a7b88b6](https://github.com/Nandoby/LazyVim/commit/a7b88b6fbecc12ff6c525f8f313519cb9f3092b2))
+
+
+### Bug Fixes
+
+* **go:** extend mason ensure_installed ([37bb54b](https://github.com/Nandoby/LazyVim/commit/37bb54b425f47dbbd6cbda6500f640c8ca2a5caa))
+* **neotest:** pass opts to neotest ([06a2e44](https://github.com/Nandoby/LazyVim/commit/06a2e44924ba1f8d4759a56dd0a94097874ca545))
+* remove debug notify ([7d151b9](https://github.com/Nandoby/LazyVim/commit/7d151b90c43c88762d80f2e16d4efbebfae97862))
+* **vscode:** added ts-context-commentstring ([9d56f2d](https://github.com/Nandoby/LazyVim/commit/9d56f2d70b38557e5200d946b4a184ee36b02cc3))
+* **vscode:** properly cleanup disabled deps ([e3dcb99](https://github.com/Nandoby/LazyVim/commit/e3dcb99130b8a4397c821a66dd27b53bc9e87b73))
+
 ## [3.5.0](https://github.com/Nandoby/LazyVim/compare/v3.4.0...v3.5.0) (2025-04-16)
 
 
