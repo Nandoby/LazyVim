@@ -1,5 +1,27 @@
 # Changelog
 
+## [3.4.0](https://github.com/Nandoby/LazyVim/compare/v3.3.0...v3.4.0) (2025-04-16)
+
+
+### Features
+
+* **project:** add to mini.starter ([f5c89f4](https://github.com/Nandoby/LazyVim/commit/f5c89f45a4d916fe8c6c37c756045cb81001cede))
+* **tailwind:** don't enable tailwind in markdown files ([4947ea1](https://github.com/Nandoby/LazyVim/commit/4947ea129a615e38f21e505a724364281cf50019))
+* **tests:** added neotest ([83089e7](https://github.com/Nandoby/LazyVim/commit/83089e724d6e5cc55cf0ed9aa46c47380f87114e))
+* **vscode:** added vscode extra with minimal functionality. Will only do something when vim.g.vscode is set ([a86f398](https://github.com/Nandoby/LazyVim/commit/a86f3980f557b0ca2f22c6c361e6326a6eeb27e8))
+
+
+### Bug Fixes
+
+* **dap:** fix the mason-nvim-dap setting name ([98175a9](https://github.com/Nandoby/LazyVim/commit/98175a9348f0531efe85df864e2b1404aaa0cdff))
+* make some extra deps optional ([faf0e1c](https://github.com/Nandoby/LazyVim/commit/faf0e1c29d97fb18f14956c53945ee0e4b39585c))
+* **persistence:** dont add rtp to session ([e6d1e53](https://github.com/Nandoby/LazyVim/commit/e6d1e53a6f377bb90a098d30aec2c24e0ea7ad06))
+
+
+### Performance Improvements
+
+* **eslint:** only run EslintFixAll for the current buffer when there are diagnostics from eslint ([34f2418](https://github.com/Nandoby/LazyVim/commit/34f241884b6b018e6030c02060c1a0bead7d47c4))
+
 ## [3.3.0](https://github.com/Nandoby/LazyVim/compare/v3.2.0...v3.3.0) (2025-04-15)
 
 
