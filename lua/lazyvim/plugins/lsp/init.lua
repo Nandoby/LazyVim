@@ -77,7 +77,7 @@ return {
     config = function(_, opts)
       local Util = require("lazyim.util")
       -- setup autoformat
-      require("lazyvim.plugins.lsp.format").autoformat = opts.autoformat
+      require("lazyvim.plugins.lsp.format").setup(opts)
       -- setup formatting and keymaps
       Util.on_attach(function(client, buffer)
         require("lazyvim.plugins.lsp.format").on_attach(client, buffer)
