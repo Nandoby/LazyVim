@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.2.0](https://github.com/Nandoby/LazyVim/compare/v4.1.1...v4.2.0) (2025-04-21)
+
+
+### Features
+
+* **hipatterns:** made tailwind ft and style configurable ([9749af0](https://github.com/Nandoby/LazyVim/commit/9749af007c6b122f88bb3811ce2218a6b6cfef03))
+* **lsp:** added `nvim-lspconfig.opts.format_notify`. Enable this to debug formatter issues. ([29159a5](https://github.com/Nandoby/LazyVim/commit/29159a5a168c6c79ead65944b907b8f58512312d))
+* **lsp:** added support for upcoming dynamic registration of formatters ([ca99ec9](https://github.com/Nandoby/LazyVim/commit/ca99ec9343b5ad1472bb372f38206931984fd845))
+
+
+### Bug Fixes
+
+* **hipatterns:** reset hl groups when colorscheme changes ([5b9d9f0](https://github.com/Nandoby/LazyVim/commit/5b9d9f016d9251fd3035d2f49f858500ce4b52d3))
+
 ## [4.1.1](https://github.com/Nandoby/LazyVim/compare/v4.1.0...v4.1.1) (2025-04-17)
 
 
