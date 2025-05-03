@@ -1,5 +1,15 @@
 # Changelog
 
+## [4.3.1](https://github.com/Nandoby/LazyVim/compare/v4.3.0...v4.3.1) (2025-05-03)
+
+
+### Bug Fixes
+
+* **dashboard:** center the LazyVim logo ([1835911](https://github.com/Nandoby/LazyVim/commit/18359112219a2b5825d209ee75c8bd6260b02876))
+* **luasnip:** use `echo` instead of `echo -e` for build warning ([82f4b3f](https://github.com/Nandoby/LazyVim/commit/82f4b3fa764b1f6b35ca68e25cb598e1f1b1a322))
+* **neotest:** properly detect __call ([a5fe508](https://github.com/Nandoby/LazyVim/commit/a5fe50808dc6177abc95bfa1b297e027c0e9a0be))
+* **neotest:** removed `&lt;leader&gt;tR` in favor of `<leader>tt` ([cc8ba5a](https://github.com/Nandoby/LazyVim/commit/cc8ba5af8292f2f51a258acacbe788f1ea1dc578))
+
 ## [4.3.0](https://github.com/Nandoby/LazyVim/compare/v4.2.0...v4.3.0) (2025-05-03)
 
 
