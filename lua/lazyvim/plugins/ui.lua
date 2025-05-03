@@ -1,10 +1,10 @@
 return {
-  -- Better `vim.notify`
+  -- Better `vim.notify()`
   {
     "rcarriga/nvim-notify",
     keys = {
       {
-        "<leader>ud",
+        "<leader>un",
         function()
           require("notify").dismiss({ silent = true, pending = true })
         end,
@@ -242,7 +242,7 @@ return {
       { "<leader>sna", function() require("noice").cmd("all") end, desc = "Noice All" },
       { "<leader>snd", function() require("noice").cmd("dismiss") end, desc = "Dismiss All" },
       { "<c-f>", function() if not require("noice.lsp").scroll(4) then return "<c-f>" end end, silent = true, expr = true, desc = "Scroll forward", mode = {"i", "n", "s"} },
-      { "<c-b>", function() if not require("noice.lsp").scroll(-4) then return "<c-b>" end end, silent = true, expr = true, desc = "Scroll backward", mode = {"i", "n", "s"} },
+      { "<c-b>", function() if not require("noice.lsp").scroll(-4) then return "<c-b>" end end, silent = true, expr = true, desc = "Scroll backward", mode = {"i", "n", "s"}},
     },
   },
 
@@ -251,14 +251,14 @@ return {
     "goolord/alpha-nvim",
     event = "VimEnter",
     opts = function()
-      local dashboard = require("alpha.themes.dashboard")
+      local dashboard
       local logo = [[
-             ██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z
-             ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝██║   ██║██║████╗ ████║      Z    
-             ██║     ███████║  ███╔╝  ╚████╔╝ ██║   ██║██║██╔████╔██║   z       
-             ██║     ██╔══██║ ███╔╝    ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║ z         
-             ███████╗██║  ██║███████╗   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║
-             ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝
+           ██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z
+           ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝██║   ██║██║████╗ ████║      Z    
+           ██║     ███████║  ███╔╝  ╚████╔╝ ██║   ██║██║██╔████╔██║   z       
+           ██║     ██╔══██║ ███╔╝    ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║ z         
+           ███████╗██║  ██║███████╗   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║
+           ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝
       ]]
 
       dashboard.section.header.val = vim.split(logo, "\n")
@@ -314,7 +314,7 @@ return {
     lazy = true,
     init = function()
       vim.g.navic_silence = true
-      require("lazyvim.util.init").on_attach(function(client, buffer)
+      require("lazyvim.util").on_attach(function(client, buffer)
         if client.server_capabilities.documentSymbolProvider then
           require("nvim-navic").attach(client, buffer)
         end
