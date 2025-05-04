@@ -1,5 +1,28 @@
 # Changelog
 
+## [4.5.0](https://github.com/Nandoby/LazyVim/compare/v4.4.0...v4.5.0) (2025-05-04)
+
+
+### Features
+
+* **keymaps:** added `&lt;c-/&gt;` in normal/terminal mode to toggle main terminal ([92856fd](https://github.com/Nandoby/LazyVim/commit/92856fd7be6df1d7c2a65090dd15afeb299801df))
+* **keymaps:** added some useful keymaps for terminals ([01b7c97](https://github.com/Nandoby/LazyVim/commit/01b7c972950c8aa8dcca8a64362f0fe13732c537))
+* **neo-tree:** enabled document_symbols for neo-tree ([8685f6c](https://github.com/Nandoby/LazyVim/commit/8685f6c9eb108d10eb6293796941ce0c4876a512))
+* **noice:** route some undo messages to the mini view ([db6c641](https://github.com/Nandoby/LazyVim/commit/db6c641e9002e634a364b51adf95b3085fb3757d))
+* **util:** LazyVim terminals are now persistent by default (toggleterm) ([1c2a23e](https://github.com/Nandoby/LazyVim/commit/1c2a23efc372b74d201be57c9d956dd1003543fe))
+
+
+### Bug Fixes
+
+* **indentscope:** dont use indentscope/blankline for lazyterm/toggleterm/notify ([5c15b4e](https://github.com/Nandoby/LazyVim/commit/5c15b4e7fecac546ebfe17c5c88e6e433c329cab))
+* **lualine:** dont load copilot when not available ([8a266f9](https://github.com/Nandoby/LazyVim/commit/8a266f936171f50b20bfcd5eb3fbfca1d301ee37))
+* **spectre:** make spectre behave with regards to swap files ([c971c7a](https://github.com/Nandoby/LazyVim/commit/c971c7a0946b157f48f65e319c4b6b9aaac6c4fe))
+
+
+### Performance Improvements
+
+* **illuminate:** on large files &gt;2000 lines, enable lsp references only ([c2f9bac](https://github.com/Nandoby/LazyVim/commit/c2f9bac3db710aecc556d08b1ebf4a4bf463ce76))
+
 ## [4.4.0](https://github.com/Nandoby/LazyVim/compare/v4.3.1...v4.4.0) (2025-05-03)
 
 
