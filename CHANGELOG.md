@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.6.2](https://github.com/Nandoby/LazyVim/compare/v4.6.1...v4.6.2) (2025-05-05)
+
+
+### Bug Fixes
+
+* **keymaps:** terminal show/hide ([62d90e3](https://github.com/Nandoby/LazyVim/commit/62d90e33ff1567faf006954940551887fe9803c4))
+
 ## [4.6.1](https://github.com/Nandoby/LazyVim/compare/v4.6.0...v4.6.1) (2025-05-05)
 
 
