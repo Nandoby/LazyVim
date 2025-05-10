@@ -1,5 +1,20 @@
 # Changelog
 
+## [4.7.0](https://github.com/Nandoby/LazyVim/compare/v4.6.2...v4.7.0) (2025-05-10)
+
+
+### Features
+
+* **edgy:** added `\&lt;leader\&gt;ue` to quickly jump to an edgy window ([36c719f](https://github.com/Nandoby/LazyVim/commit/36c719fc929e4ec52623419971dad689b07832a7))
+* **edgy:** added noice ([1d04029](https://github.com/Nandoby/LazyVim/commit/1d040291b9ac11817e1558a42c5b94673460b6bb))
+
+
+### Bug Fixes
+
+* **edgy:** dont layout toggleterm floats ([b77e134](https://github.com/Nandoby/LazyVim/commit/b77e134342fb82ca93d0c672adf332689ae183d2))
+* **format:** eslint should respect autoformat ([3cdbd3b](https://github.com/Nandoby/LazyVim/commit/3cdbd3b420b80f3e93145b7fa13b6c0bca989a24))
+* **qf:** better error message ([77c6fca](https://github.com/Nandoby/LazyVim/commit/77c6fca4778ab5dc4d3dd978cb3d4fcd31c74526))
+
 ## [4.6.2](https://github.com/Nandoby/LazyVim/compare/v4.6.1...v4.6.2) (2025-05-05)
 
 
